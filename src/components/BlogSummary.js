@@ -1,0 +1,87 @@
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
+export default function BlogSummary(props) {
+    let currentDate = props.blog.date && new Date(props.blog.date)
+    console.log(props.blog)
+    return (
+        <BlogSummaryWrapper className="col-12 col-lg-4 col-md-6 col-sm-6" img={props.blog.imageUrl}>
+            <Link to={{
+                pathname:`/${props.blog.title}`,
+                state: props.blog
+                }} onClick={() => props.openBlog(props.blog)}>
+                <div className="summaryContainer">
+                    <div className="summaryTitle">{props.blog.title}</div>
+                    <div className="summaryBody">
+                        <div className="imgContainer"></div>
+                        <div className="blogSummary">{props.blog.summary}</div>
+                    </div>
+                    <div className="row summaryFooter">
+                        <div className="summaryDate ml-auto mr-3">{currentDate && currentDate.toDateString()}</div>
+                    </div>
+                </div>
+            </Link>
+        </BlogSummaryWrapper>
+    )
+}
+
+const BlogSummaryWrapper = styled.div`
+    .summaryContainer {
+        width: 100%;
+        border-radius: 5px;
+        box-shadow: 1px 1px 10px -5px grey;
+        margin-bottom: 2rem;
+    }
+    .summaryContainer:hover {
+        animation: move-up 0.5s ease-in-out;
+    }
+    .summaryFooter {
+        padding: 1rem;
+        color: var(--mainGold);
+    }
+    .summaryTitle {
+        height: 6rem;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 1rem;
+        color: white;
+        background: var(--mainGold);
+    }
+    .imgContainer {
+        margin-top: 1rem;
+        width: 100%;
+        height: 10rem;
+        background-image: url(${props => props.img});
+        background-position: center;
+    }
+    .summaryDate {
+        font-size: 0.8rem;
+    }
+    .blogSummary{
+        padding: 0.5rem;
+        height: 10rem;
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+        overflow-y: scroll;
+        color: var(--mainBlue);
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--mainGold);
+            outline: 1px solid var(--mainGold);
+        }
+    }
+    .summaryBody {
+        padding: 1rem;
+    }
+    @media (max-width: 600px) {
+        .summaryContainer {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    @keyframes move-up {
+        0% {transform: translateY(0px)}
+        50% {transform: translateY(-10px)}
+        100% {transform: translateY(0px)}
+    }
+`

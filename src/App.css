@@ -1,5 +1,16 @@
+:root {
+  --mainGold: rgba(191, 144, 34, 1);
+  --lightGold: rgba(191, 144, 34, 0.8);
+  --mainBlue: rgba(22, 72, 111, 1);
+  --lightBlue: rgba(152, 191, 200, 1);
+}
+
 .App {
   text-align: center;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 .App-logo {

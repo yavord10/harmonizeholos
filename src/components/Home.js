@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import img from '.././sky.jpg'
 import Services from './Services';
 import Session from './Session';
+import Footer from './Footer';
 
 export default class Home extends Component {
     render() {
@@ -16,6 +17,7 @@ export default class Home extends Component {
                 </div>
                 <Services />
                 <Session />
+                <Footer />
             </HomeWrapper>
         )
     }
@@ -36,7 +38,7 @@ const HomeWrapper = styled.div`
     .homeTitle {
         color: white;
         .colorSpan {
-            color: gold;
+            color: var(--mainGold);
         }
     }
     .homeModal {
@@ -48,12 +50,12 @@ const HomeWrapper = styled.div`
         width: 50%;
     }
     .homeText {
-        color: gold;
+        color: var(--mainGold);
     }
     .homeButton {
         margin-top: 1rem;
         background none;
-        border: solid 1px gold;
+        border: solid 1px var(--mainGold);
         color: white;
         font-size: 1.4rem;
     }

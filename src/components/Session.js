@@ -6,7 +6,7 @@ export default class Session extends Component {
         return (
             <SessionWrapper>
                 <div className="row">
-                    <div className="col-10 col-md-6 col-lg-6">
+                    <div className="col-12 col-md-6 col-lg-6">
                         <div className="sessionTextContainer mx-auto">
                             <h5 className="sessionTitle">
                                 Регистрираите Час
@@ -17,8 +17,8 @@ export default class Session extends Component {
                             </p>
                         </div>
                     </div>
-                    <div className="col-10 col-md-6 col-lg-6">
-                        <div className="sessionContainer">
+                    <div className="col-12 col-md-6 col-lg-6">
+                        <div className="sessionContainer mx-auto">
                             <form>
                                 <div className="form-group">
                                     <label htmlFor="exampleFormControlInput1">Име</label>
@@ -55,10 +55,9 @@ export default class Session extends Component {
 }
 
 const SessionWrapper = styled.div`
-    margin-bottom: 3rem;
     .row {
-        background: gold;
-        padding: 1rem;
+        background: var(--mainGold);
+        padding: 2rem;
         box-shadow: inset 0 0 10px grey;
     }
     .sessionContainer {
@@ -68,17 +67,17 @@ const SessionWrapper = styled.div`
         background: white;
     }
     .sessionTextContainer {
-        margin-top: 8rem;
+        margin-top: 10rem;
         width: 70%;
         .sessionTitle {
-            color: steelblue;
+            color: var(--mainBlue);
         }
         .sessionText {
             color: white;
         }
     }
     .btn {
-        background: steelblue;
+        background: var(--mainBlue);
         color: white;
     }
 `
