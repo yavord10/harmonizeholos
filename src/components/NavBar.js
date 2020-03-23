@@ -24,7 +24,7 @@ export default class NavBar extends Component {
     handleScroll = () => {
         let topOfPage = window.pageYOffset;
         // Check if it was scrolled back to the top.
-        if (topOfPage <= 600) {
+        if (topOfPage <= 15) {
             this.setState(() => {
                 return {scrolled: false}
             })
@@ -43,16 +43,13 @@ export default class NavBar extends Component {
     render() {
         return (
             <NavBarWrapper>
-                <nav className={this.state.scrolled ? "navbar navbar-expand-lg fixed-top coloredNav" : "navbar navbar-expand-lg fixed-top coloredNav"} onScroll={() => console.log('scrolled')}>
+                <nav className={this.state.scrolled ? "navbar navbar-expand-lg fixed-top coloredNav" : "navbar navbar-expand-lg fixed-top topColorNav"} onScroll={() => console.log('scrolled')}>
                     <Link to="/" className="navbar-brand">HarmonizeHolos</Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
-                            <li className="nav-item active">
-                                <a className="nav-link"><span className="sr-only">(current)</span></a>
-                            </li>
                             <Link to="/">
                                 <li className="nav-item nav-link">
                                     Начало
@@ -62,15 +59,15 @@ export default class NavBar extends Component {
                                 <a className="nav-link dropdown-toggle" onClick={() => this.toggleDropDown()}>
                                     Услуги
                                 </a>
-                                <div className={this.state.dropdown ? "dropdown-menu" : "hidden"}>
-                                    <a className="dropdown-item">Холотропно Дишане</a>
-                                    <a className="dropdown-item">Соул Колаж</a>
+                                <div className={this.state.dropdown ? "dropdown-menu" : "hidden"} onClick={() => this.toggleDropDown()}>
+                                    <Link to="соулколаж" className="dropdown-item">Соул Колаж</Link>
+                                    <Link to="холотропнодишане" className="dropdown-item">Холотропно дишане</Link>
                                     <Link to="/медитация" className="dropdown-item">Медитация</Link>
                                 </div>
                             </li>
-                            <li className="nav-item">
+                            <Link to="/часове" className="nav-item">
                                 <a className="nav-link">Часове</a>
-                            </li>
+                            </Link>
                             <Link to="/блог">
                                 <li className="nav-item nav-link">
                                     Блог
@@ -81,9 +78,9 @@ export default class NavBar extends Component {
                                     За мен
                                 </li>
                             </Link>
-                            <li className="nav-item nav-link">
+                            <Link to="/контакти" className="nav-item nav-link">
                                 Контакти
-                            </li>
+                            </Link>
                         </ul>
                         <form className="form-inline my-2 my-lg-0">
                             <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
@@ -107,9 +104,15 @@ const NavBarWrapper = styled.div`
             color: white;
             text-decoration: none !important;
         }
+        padding: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     .coloredNav {
-        background: rgba(22, 72, 111, 0.6);
+        background: rgba(117, 177, 169, 0.8);
+    }
+    .topColorNav {
+        background: var(--mainBlue);
     }
     .hidden {
         display: none;
@@ -135,5 +138,18 @@ const NavBarWrapper = styled.div`
     }
     .dropdown-item {
         color: var(--mainBlue) !important;
+    }
+    .dropdown-item:active {
+        background: var(--lightBlue) !important;
+    }
+    .nav-link {
+        cursor: pointer;
+        padding: 1rem;
+        transition: background-color 0.5s ease;
+        width: 6rem;
+    }
+    .nav-link: hover {
+        background-color: var(--lightBlue);
+        color: var(--mainDark);
     }
 `

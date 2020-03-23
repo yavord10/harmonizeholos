@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function BlogItem(props) {
+export default function BlogItem(props) {  
     var element = document.createElement('template');
+    let blogDate = new Date(props.location.state.date)
     console.log(element);
     if (props.location.state) {
         element.innerHtml = props.location.state.content
@@ -13,9 +14,11 @@ export default function BlogItem(props) {
     return (
         <BlogItemWrapper>
             {props.location.state.title ? <div className="container">
+                <p className="blogItemTag">Медитация</p>
                 <h5 className="blogItemTitle">
                     {props.location.state.title}
                 </h5>
+                <p className="blogDate">Качено: <span className="gold">{blogDate.toDateString()}</span></p>
                 <img src={props.location.state.imageUrl} alt="" className="blogItemImg"/>
                 <div className="blogItemContent" dangerouslySetInnerHTML={{__html: element.innerHtml}}>
                     
@@ -30,22 +33,33 @@ const BlogItemWrapper = styled.div`
     padding: 2rem;
     .container {
         padding: 1rem;
-        background: var(--lightGold);
-        box-shadow: 1px 1px 10px -5px grey;
         .blogItemTitle {
-            font-size: 2rem;
+            font-size: 3rem;
             margin-top: 1rem;
             margin-bottom: 2rem;
             color: var(--mainBlue);
         }
         .blogItemImg {
-            width: 80%;
+            width: 100%;
             height: auto;
             box-shadow: 0px 0px 10px -5px grey;
         }
         .blogItemContent {
             margin-top: 2rem;
-            color: white;
+            color: var(--mainBlue);
+        }
+        .blogItemTag {
+            margin-bottom: -1.5rem;
+            font-size: 1.5rem;
+            color: var(--mainGold);
+            text-align: center;
+        }
+        .blogDate {
+            text-align: right;
+            margin-bottom: 0rem;
+        }
+        .gold {
+            color: var(--mainGold);
         }
     }
 `

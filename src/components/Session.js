@@ -9,7 +9,7 @@ export default class Session extends Component {
                     <div className="col-12 col-md-6 col-lg-6">
                         <div className="sessionTextContainer mx-auto">
                             <h5 className="sessionTitle">
-                                Регистрираите Час
+                                Запазете Час
                             </h5>
                             <p className="sessionText">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -19,10 +19,10 @@ export default class Session extends Component {
                     </div>
                     <div className="col-12 col-md-6 col-lg-6">
                         <div className="sessionContainer mx-auto">
-                            <form>
+                            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScTxho6Mik9N2aZTGnM-XrgfJTKpP3JX1jQ7ncN1RlUW63bLg/formResponse">
                                 <div className="form-group">
                                     <label htmlFor="exampleFormControlInput1">Име</label>
-                                    <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Име" />
+                                    <input type="text" className="form-control quantumWizTextinputPaperinputInput exportInput" id="exampleFormControlInput1" name="entry.1045781291" placeholder="Име" />
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="exampleFormControlInput1">Презиме</label>
@@ -30,7 +30,7 @@ export default class Session extends Component {
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="exampleFormControlInput1">Имейл Адрес</label>
-                                    <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />
+                                    <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="entry.1065046570"/>
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="exampleFormControlSelect1">Сесия</label>
@@ -65,6 +65,7 @@ const SessionWrapper = styled.div`
         width: 80%;
         box-shadow: 1px 1px 10px -5px grey;
         background: white;
+        overflow-y: none;
     }
     .sessionTextContainer {
         margin-top: 10rem;
@@ -79,5 +80,16 @@ const SessionWrapper = styled.div`
     .btn {
         background: var(--mainBlue);
         color: white;
+    }
+    iframe {
+        width: 100%;
+        overflow-y: none;
+        label {
+            padding: 0rem !important;
+            color: var(--mainGold) !important;
+        }
+        input {
+            padding: 0rem;
+        }
     }
 `

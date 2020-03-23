@@ -6,20 +6,24 @@ export default function AboutMe() {
     return (
         <AboutMeWrappr>
             <div className="row rowTwo"></div>
-            <div className="container">
-                <div className="row mb-3">
+            <div className="">
+                <div className="row mb-3 headerRow">
                     <div className="mx-auto">
-                        <div className="aboutMeImg mx-auto">
-                            
+                        <div className="row">
+                            <div className="col">
+                                <div className="aboutMeImg mx-auto" />
+                            </div>
+                            <div className="col">
+                                <h5 className="aboutMeTitle">Ели Димитрова</h5> 
+                                <p className="mb-1">Психолог-консултант</p>
+                                <p className="mb-3">Фасилитатор:</p>
+                                <p className="paragraph">по <span className="blue">Холотропно дишане™</span> (2009)</p>
+                                <p className="paragraph">по <span className="blue">СоулКолаж®</span> (2013)</p>
+                            </div>
                         </div>
-                        <h5 className="aboutMeTitle">Ели Димитрова</h5> 
-                        <p className="mb-1">Психолог-консултант</p>
-                        <p className="mb-3">Фасилитатор:</p>
-                        <p className="paragraph">по <span className="blue">Холотропно дишане™</span> (2009)</p>
-                        <p className="paragraph">по <span className="blue">СоулКолаж®</span> (2013)</p>
                     </div>
                 </div>
-                <div className="row mt-3">
+                <div className="row mt-3 mx-auto container">
                     <div className="aboutMeText mx-auto">
                         <p>Здравейте, казвам се Ели Димитрова. Живея и работя в гр. София. По специаност съм психолог-консултант, сертифицирана съм като фасилитатор по Холотропно дишане™ (2009) и по СоулКолаж® (2013). От години се занимавам и с медитация и духовни практики. Преминала съм обучение за консултант по когнитивно-поведенческа терапия, в група за личен опит по психодрама и лична терапия в неорайхианската школа.</p>
                         <p>Интересът ми – и професионален, и личен – е в областта на трансперсоналната психология (характерното за този клон е обединяването на опита и знанието на Запада и Изтока, както и признаването на духовните търсения и стремежи за естествено присъща човешка потребност); личностното развитие, еволюция и реализация; алтернативни лечебни системи; духовния път. По мое мнение основното в живота ни е да се свържем отново с вътрешните си ресурси, целебни сили, творчески потенциал, интуиция и мъдрост. Защото всичко е в нас от самото начало и сме съвършени в собственото си несъвършенство. А щастието е просто едно естествено състояние … нужно е само да си припомним най-краткия път до него, като се учим да бъдем осъзнати и да сме наясно с индивидуалната си ситуация и способности.</p>
@@ -34,27 +38,25 @@ export default function AboutMe() {
 
 const AboutMeWrappr = styled.div`
     .aboutMeImg {
-        width: 10rem;
-        height: 10rem;
+        width: 11rem;
+        height: 11rem;
         border-radius: 50%;
         background-image: url(${img});
         background-position: center;
         background-size: cover;
         fitler: grayscale(20%) brightness(70%);
         box-shadow: 2px 2px 10px -5px grey;
-        margin-top: 5rem;
     }
-    .rowMain {
+    .col {
+        margin-bottom: 5rem;
         margin-top: 5rem;
-    }
-    .aboutMeText {
-        width: 90%;
     }
     .aboutMeTitle {
+        margin-top: 0.5rem;
         color: var(--mainGold);
     }
     .blue {
-        color: var(--mainBlue);
+        color: var(--mainDark);
         font-weight: bold;
     }
     .paragraph {
@@ -64,5 +66,10 @@ const AboutMeWrappr = styled.div`
         p {
             color: var(--mainBlue);
         }
+    }
+    .headerRow {
+        background: var(--lightBlue);
+        margin-top: 5rem;
+        box-shadow: inset 0 0 10px grey;
     }
 `

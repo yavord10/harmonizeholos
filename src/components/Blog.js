@@ -71,8 +71,8 @@ export default class Blog extends PureComponent {
 }
 
 const BlogWrapper = styled.div`
-    margin-top: 5rem;
     padding: 1rem;
+    padding-top: 5rem;
     .blogTitle {
         color: black;
     }

@@ -8,7 +8,7 @@ export default function BlogSummary(props) {
     return (
         <BlogSummaryWrapper className="col-12 col-lg-4 col-md-6 col-sm-6" img={props.blog.imageUrl}>
             <Link to={{
-                pathname:`/${props.blog.title}`,
+                pathname:`/статия/${props.blog.title}`,
                 state: props.blog
                 }} onClick={() => props.openBlog(props.blog)}>
                 <div className="summaryContainer">
@@ -32,9 +32,11 @@ const BlogSummaryWrapper = styled.div`
         border-radius: 5px;
         box-shadow: 1px 1px 10px -5px grey;
         margin-bottom: 2rem;
+        background: white;
     }
     .summaryContainer:hover {
         animation: move-up 0.5s ease-in-out;
+        box-shadow: 1px 1px 20px -10px grey;
     }
     .summaryFooter {
         padding: 1rem;
@@ -46,7 +48,7 @@ const BlogSummaryWrapper = styled.div`
         border-top-right-radius: 5px;
         padding: 1rem;
         color: white;
-        background: var(--mainGold);
+        background: var(--mainDark);
     }
     .imgContainer {
         margin-top: 1rem;
@@ -54,6 +56,7 @@ const BlogSummaryWrapper = styled.div`
         height: 10rem;
         background-image: url(${props => props.img});
         background-position: center;
+        border-bottom: 0.4rem solid var(--mainGold);
     }
     .summaryDate {
         font-size: 0.8rem;

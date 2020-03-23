@@ -17,7 +17,6 @@ export default class Home extends Component {
                 </div>
                 <Services />
                 <Session />
-                <Footer />
             </HomeWrapper>
         )
     }
@@ -32,7 +31,7 @@ const HomeWrapper = styled.div`
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        filter: grayscale(20%) brightness(60%);
+        filter: grayscale(20%) brightness(70%);
         box-shadow: 0px 1px 10px -5px grey;
     }
     .homeTitle {
