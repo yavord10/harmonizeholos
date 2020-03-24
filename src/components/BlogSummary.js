@@ -29,7 +29,7 @@ export default function BlogSummary(props) {
 const BlogSummaryWrapper = styled.div`
     .summaryContainer {
         width: 100%;
-        border-radius: 5px;
+        border-radius: 3px;
         box-shadow: 1px 1px 10px -5px grey;
         margin-bottom: 2rem;
         background: white;
@@ -44,19 +44,21 @@ const BlogSummaryWrapper = styled.div`
     }
     .summaryTitle {
         height: 6rem;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
         padding: 1rem;
         color: white;
-        background: var(--mainDark);
+        background: var(--mainBlue);
     }
     .imgContainer {
-        margin-top: 1rem;
+        margin-top: 0.3rem;
         width: 100%;
         height: 10rem;
         background-image: url(${props => props.img});
         background-position: center;
         border-bottom: 0.4rem solid var(--mainGold);
+        filter: grayscale(5%) brightness(95%);
+        box-shadow: inset 0px 0px 10px var(--mainGold);
     }
     .summaryDate {
         font-size: 0.8rem;

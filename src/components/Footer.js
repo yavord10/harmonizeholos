@@ -38,7 +38,7 @@ const FooterWrapper = styled.div`
     }
     .col {
         p {
-            color: white;
+            color: var(--mainDark);
             text-decoration: none;
         }
     }

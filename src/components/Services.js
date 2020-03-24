@@ -64,6 +64,9 @@ const ServicesWrapper = styled.div`
     .servicesSeparator {
         width: 100%;
     }
+    .servicesSeparatorText {
+        color: var(--mainDark);
+    }
     h3 {
         margin-top: 2rem;
         margin-left: 1rem;

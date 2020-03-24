@@ -42,7 +42,8 @@ const BlogItemWrapper = styled.div`
         .blogItemImg {
             width: 100%;
             height: auto;
-            box-shadow: 0px 0px 10px -5px grey;
+            box-shadow: 0px 0px 10px var(--lightBlue);
+            filter: grayscale(10%) brightness(90%);
         }
         .blogItemContent {
             margin-top: 2rem;
@@ -56,7 +57,7 @@ const BlogItemWrapper = styled.div`
         }
         .blogDate {
             text-align: right;
-            margin-bottom: 0rem;
+            margin-bottom: 0.2rem;
         }
         .gold {
             color: var(--mainGold);

@@ -12,6 +12,7 @@ import Holothropic from './components/Holothropic';
 import SoulCollage from './components/SoulCollage';
 import Footer from './components/Footer';
 import Contacts from './components/Contacts';
+import Hours from './components/Hours';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/холотропнодишане" component={Holothropic} />
         <Route path="/соулколаж" component={SoulCollage} />
         <Route path="/контакти" component={Contacts} />
+        <Route path="/часове" component={Hours} />
         <Route path="/статия/:blog" component={BlogItem} />
       </Switch>
       <Footer />
