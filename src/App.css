@@ -1,8 +1,9 @@
 :root {
-  --mainGold: #D9B44A;
-  --mainDark: #4f6457;
-  --mainBlue: #487872;
+  --mainGold: #5a8c91;
+  --mainDark: #433e4d;
+  --mainBlue: #d97ca2;
   --lightBlue: rgb(202, 227, 216);
+  --brightPink: #cc2b6e;
 }
 
 .App {

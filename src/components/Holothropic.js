@@ -53,11 +53,11 @@ const HolothropicWrapper = styled.div`
             filter: grayscale(20%) brightness(80%);
             padding: 8rem;
             margin-bottom: 3rem;
-            box-shadow: 0 0 10px var(--mainBlue);
+            box-shadow: 0 0 10px var(--mainDark);
         }
         .paragraph {
             margin-bottom: 2rem;
-            color: var(--mainBlue) !important;
+            color: var(--mainDark) !important;
             width: 90%;
             padding-left: 1rem;
             text-align: left;

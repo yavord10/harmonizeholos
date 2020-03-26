@@ -66,7 +66,7 @@ export default class NavBar extends Component {
                                 </div>
                             </li>
                             <Link to="/часове" className="nav-item">
-                                <a className="nav-link">Часове</a>
+                                <li className="nav-link">Часове</li>
                             </Link>
                             <Link to="/блог">
                                 <li className="nav-item nav-link">
@@ -95,7 +95,7 @@ export default class NavBar extends Component {
 
 const NavBarWrapper = styled.div`
     .navbar-brand {
-        color: var(--mainGold) !important;
+        color: var(--mainBlue) !important;
     }
     .navbar {
         background: none;
@@ -109,10 +109,10 @@ const NavBarWrapper = styled.div`
         padding-right: 1rem;
     }
     .coloredNav {
-        background: rgba(117, 177, 169, 0.8);
+        background: rgba(58, 51, 71, 0.8);
     }
     .topColorNav {
-        background: var(--mainBlue);
+        background: var(--mainDark);
     }
     .hidden {
         display: none;

@@ -35,7 +35,7 @@ export default function SoulCollage() {
 const SoulCollageWrapper = styled.div`
     .SoulCollageContainer {
         margin-bottom: 3rem;
-        color: var(--mainBlue);
+        color: var(--mainDark);
         .SoulCollageTitle {
             font-size: 3rem;
             color: white;
@@ -56,5 +56,6 @@ const SoulCollageWrapper = styled.div`
     }
     .soulText {
         padding: 2rem;
+        text-align: left;
     }
 `

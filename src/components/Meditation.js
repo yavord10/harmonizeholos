@@ -5,7 +5,7 @@ import img from '../meditate-bg.jpg'
 export default function Meditation() {
     return (
         <MeditationWrapper>
-            <div className="meditationContainer container">
+            <div className="meditationContainer">
                 <div className="imgContainer">
                     <h5 className="meditationTitle">Медитация</h5>
                 </div>
@@ -38,7 +38,7 @@ const MeditationWrapper = styled.div`
         margin-bottom: 3rem;
         background: var(--lightGold);
         padding: 2rem;
-        color: var(--mainBlue);
+        color: var(--mainDark);
         .meditationTitle {
             font-size: 3rem;
             color: white;
@@ -50,6 +50,7 @@ const MeditationWrapper = styled.div`
         }
         .meditationText {
             padding: 2rem;
+            text-align: left;
         }
         .imgContainer {
             background-image: url(${img});
@@ -59,7 +60,7 @@ const MeditationWrapper = styled.div`
             filter: grayscale(20%) brightness(80%);
             padding: 6rem;
             margin-bottom: 1rem;
-            box-shadow: 0 0 10px var(--mainBlue);
+            box-shadow: 0 0 10px var(--mainDark);
         }
     }
 `

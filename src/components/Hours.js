@@ -9,7 +9,7 @@ export default function Hours() {
                 <h5 className="hoursOnline">Он-лайн</h5>
             </div>
             <div className="placeDiv">
-
+                
             </div>
         </HoursWrapper>
     )

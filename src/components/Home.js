@@ -37,7 +37,7 @@ const HomeWrapper = styled.div`
     .homeTitle {
         color: white;
         .colorSpan {
-            color: var(--mainGold);
+            color: var(--mainBlue);
         }
     }
     .homeModal {
@@ -49,12 +49,12 @@ const HomeWrapper = styled.div`
         width: 50%;
     }
     .homeText {
-        color: var(--mainGold);
+        color: var(--mainBlue);
     }
     .homeButton {
         margin-top: 1rem;
         background none;
-        border: solid 1px var(--mainGold);
+        border: solid 1px var(--mainBlue);
         color: white;
         font-size: 1.4rem;
     }

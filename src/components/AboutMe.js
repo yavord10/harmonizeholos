@@ -63,8 +63,9 @@ const AboutMeWrappr = styled.div`
         margin-top: -1rem;
     }
     .aboutMeText {
+        padding: 1rem;
         p {
-            color: var(--mainBlue);
+            color: var(--mainDark);
         }
     }
     .headerRow {

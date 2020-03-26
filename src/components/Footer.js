@@ -29,6 +29,7 @@ export default function Footer() {
 }
 
 const FooterWrapper = styled.div`
+    box-shadow: 0px -1px 0.5px 1px slategrey;
     .row {
         padding: 2rem;
         background: var(--lightBlue)
