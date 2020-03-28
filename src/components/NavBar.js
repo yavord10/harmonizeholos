@@ -50,7 +50,7 @@ export default class NavBar extends Component {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
-                            <Link to="/">
+                            <Link to="/" onClick={() => window.scrollTo(0,0)}>
                                 <li className="nav-item nav-link">
                                     Начало
                                 </li>
@@ -60,25 +60,25 @@ export default class NavBar extends Component {
                                     Услуги
                                 </a>
                                 <div className={this.state.dropdown ? "dropdown-menu" : "hidden"} onClick={() => this.toggleDropDown()}>
-                                    <Link to="соулколаж" className="dropdown-item">Соул Колаж</Link>
-                                    <Link to="холотропнодишане" className="dropdown-item">Холотропно дишане</Link>
-                                    <Link to="/медитация" className="dropdown-item">Медитация</Link>
+                                    <Link to="соулколаж" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Соул Колаж</Link>
+                                    <Link to="холотропнодишане" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Холотропно дишане</Link>
+                                    <Link to="/медитация" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Медитация</Link>
                                 </div>
                             </li>
-                            <Link to="/методи" className="nav-item">
+                            <Link to="/методи" className="nav-item" onClick={() => window.scrollTo(0,0)}>
                                 <li className="nav-link">Методи</li>
                             </Link>
-                            <Link to="/блог">
+                            <Link to="/блог" onClick={() => window.scrollTo(0,0)}>
                                 <li className="nav-item nav-link">
                                     Блог
                                 </li>
                             </Link>
-                            <Link to="/замен">
+                            <Link to="/замен" onClick={() => window.scrollTo(0,0)}>
                                 <li className="nav-item nav-link">
                                     За мен
                                 </li>
                             </Link>
-                            <Link to="/контакти" className="nav-item nav-link">
+                            <Link to="/контакти" className="nav-item nav-link" onClick={() => window.scrollTo(0,0)}>
                                 Контакти
                             </Link>
                         </ul>
