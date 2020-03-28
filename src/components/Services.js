@@ -9,7 +9,8 @@ export default class Services extends Component {
         return (
             <ServicesWrapper>
                 <div className="servicesSeparator">
-                    <h3 className="servicesSeparatorText">Услуги</h3>
+                    <h3 className="servicesSeparatorText mx-auto">Услуги</h3>
+                    <div className="separator mx-auto"></div>
                 </div>
                 <div className="servicesContainer row">
                     <div className="servicesCol col-10 col-md-3 col-lg-3 mx-auto">
@@ -63,19 +64,28 @@ const ServicesWrapper = styled.div`
     .serviceCard {
         margin-top: 3rem;
         padding: 1rem;
-        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 2px 5px -2px rgba(0,0,0,0.2);
         .serviceTitle {
-            color: var(--mainGold);
+            color: var(--mainBlue);
+            font-size: 1.5rem;
         }
         .serviceText {
             color: black;
         }
+    }
+    .separator {
+        margin-top: 2rem;
+        border: solid 2px var(--mainGold);
+        border-radius: 10%;
+        width: 3%;
     }
     .servicesSeparator {
         width: 100%;
     }
     .servicesSeparatorText {
         color: var(--mainDark);
+        text-align: center;
+        font-size: 2.5rem;
     }
     h3 {
         margin-top: 2rem;

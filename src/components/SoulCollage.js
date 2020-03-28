@@ -9,7 +9,7 @@ export default function SoulCollage() {
                 <div className="imgContainer">
                     <h5 className="SoulCollageTitle">Соул Колаж</h5>
                 </div>
-                <div className="soulText">
+                <div className="soulText mx-auto">
                     <p>
                         Методът СоулКолаж® е приятен творчески метод за себе-изследване и има силен терапевтичен ефект. 
                         Стъпва на творческия потенциал на човека, като разгръща въображението, интуицията и съзидателната му сила.</p>
@@ -37,6 +37,8 @@ const SoulCollageWrapper = styled.div`
         margin-bottom: 3rem;
         color: var(--mainDark);
         .SoulCollageTitle {
+            z-index: 9999;
+            position: relative;
             font-size: 3rem;
             color: white;
             margin-bottom: 2rem;
@@ -45,6 +47,7 @@ const SoulCollageWrapper = styled.div`
         }
     }
     .imgContainer {
+        z-index: -1;
         background-image: url(${img});
         background-position: center;
         background-repeat: no-repeat;
@@ -55,6 +58,8 @@ const SoulCollageWrapper = styled.div`
         box-shadow: 0 0 10px var(--mainBlue);
     }
     .soulText {
+        width: 90%;
+        box-shadow: 0 0 10px -2px lightgrey;
         padding: 2rem;
         text-align: left;
     }

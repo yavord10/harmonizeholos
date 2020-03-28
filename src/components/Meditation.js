@@ -40,6 +40,8 @@ const MeditationWrapper = styled.div`
         padding: 2rem;
         color: var(--mainDark);
         .meditationTitle {
+            position: relative;
+            z-index: 9999;
             font-size: 3rem;
             color: white;
             margin-bottom: 2rem;
@@ -53,6 +55,7 @@ const MeditationWrapper = styled.div`
             text-align: left;
         }
         .imgContainer {
+            z-index: -1;
             background-image: url(${img});
             background-position: center;
             background-repeat: no-repeat;

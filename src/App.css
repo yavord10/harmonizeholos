@@ -1,5 +1,5 @@
 :root {
-  --mainGold: #5a8c91;
+  --mainGold: #579599;
   --mainDark: #433e4d;
   --mainBlue: #d97ca2;
   --lightBlue: rgb(202, 227, 216);
@@ -12,4 +12,13 @@
 
 a {
   text-decoration: none !important;
+}
+
+h3,h5 {
+  font-family: 'Pattaya', sans-serif !important;
+  font-weight: bold;
+}
+
+p {
+  font-family: sans-serif;
 }

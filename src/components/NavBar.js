@@ -44,7 +44,7 @@ export default class NavBar extends Component {
         return (
             <NavBarWrapper>
                 <nav className={this.state.scrolled ? "navbar navbar-expand-lg fixed-top coloredNav" : "navbar navbar-expand-lg fixed-top topColorNav"} onScroll={() => console.log('scrolled')}>
-                    <Link to="/" className="navbar-brand">HarmonizeHolos</Link>
+                    <Link to="/" className="navbar-brand"><span className="white">Harmonize</span>Holos</Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -65,8 +65,8 @@ export default class NavBar extends Component {
                                     <Link to="/медитация" className="dropdown-item">Медитация</Link>
                                 </div>
                             </li>
-                            <Link to="/часове" className="nav-item">
-                                <li className="nav-link">Часове</li>
+                            <Link to="/методи" className="nav-item">
+                                <li className="nav-link">Методи</li>
                             </Link>
                             <Link to="/блог">
                                 <li className="nav-item nav-link">
@@ -96,6 +96,10 @@ export default class NavBar extends Component {
 const NavBarWrapper = styled.div`
     .navbar-brand {
         color: var(--mainBlue) !important;
+        font-family: 'Pattaya', sans-serif;
+    }
+    .white{
+        color: white;
     }
     .navbar {
         background: none;

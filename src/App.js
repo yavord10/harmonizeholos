@@ -27,7 +27,7 @@ function App() {
         <Route path="/холотропнодишане" component={Holothropic} />
         <Route path="/соулколаж" component={SoulCollage} />
         <Route path="/контакти" component={Contacts} />
-        <Route path="/часове" component={Hours} />
+        <Route path="/методи" component={Hours} />
         <Route path="/статия/:blog" component={BlogItem} />
       </Switch>
       <Footer />

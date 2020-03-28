@@ -40,12 +40,14 @@ const HolothropicWrapper = styled.div`
         margin-bottom: 3rem;
         color: white;
         .HolothropicTitle {
+            z-index: 9999;
             font-size: 3rem;
             color: white;
             margin-top: 3rem;
             margin-bottom: 3rem;
         }
         .imgContainer {
+            z-index: -1;
             background-image: url(${img});
             background-position: center;
             background-repeat: no-repeat;

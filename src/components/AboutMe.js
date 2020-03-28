@@ -53,7 +53,9 @@ const AboutMeWrappr = styled.div`
     }
     .aboutMeTitle {
         margin-top: 0.5rem;
-        color: var(--mainGold);
+        color: var(--mainBlue);
+        font-weight: bold;
+        font-size: 1.5rem;
     }
     .blue {
         color: var(--mainDark);

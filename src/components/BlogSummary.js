@@ -17,7 +17,7 @@ export default function BlogSummary(props) {
                         <div className="blogSummary">{props.blog.summary}</div>
                     </div>
                     <div className="row summaryFooter">
-                        <div className="summaryDate ml-auto mr-3">{props.blog.date}</div>
+                        <div className="summaryDate ml-auto mr-3"><i className="far fa-clock"></i> {props.blog.date}</div>
                     </div>
                 </div>
             </Link>
@@ -45,15 +45,20 @@ const BlogSummaryWrapper = styled.div`
         }
     }
     .summaryFooter {
+        padding-top: 0;
         padding: 1rem;
         color: var(--mainGold);
     }
     .summaryTitle {
-        height: 5rem;
+        height: 6.5rem;
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
         padding: 1rem;
         color: var(--mainDark);
+        background: var(--mainGold);
+        font-size: 1.3rem;
+        font-weight: bold;
+        font-family: 'Pattaya', sans-serif;
     }
     }
     .imgContainer {
@@ -82,6 +87,7 @@ const BlogSummaryWrapper = styled.div`
     }
     .summaryBody {
         padding: 1rem;
+        padding-bottom: 0rem;
     }
     @media (max-width: 600px) {
         .summaryContainer {

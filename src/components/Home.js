@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import img from '.././sky.jpg'
 import Services from './Services';
 import Session from './Session';
-import Footer from './Footer';
+import { Link } from 'react-router-dom';
 
 export default class Home extends Component {
     render() {
@@ -12,8 +12,8 @@ export default class Home extends Component {
                 <div className="imgContainer"/>
                 <div className="homeModal">
                     <h3 className="homeTitle">Harmonize<span className="colorSpan">Holos</span></h3>
-                    <h5 className="homeText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
-                    <button className="homeButton">Регистрация</button>
+                    <p className="homeText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <Link to="/методи"><button className="homeButton">Регистрация</button></Link>
                 </div>
                 <Services />
                 <Session />
@@ -50,12 +50,21 @@ const HomeWrapper = styled.div`
     }
     .homeText {
         color: var(--mainBlue);
+        font-weight: bold;
     }
     .homeButton {
         margin-top: 1rem;
         background none;
-        border: solid 1px var(--mainBlue);
+        border: solid 2px var(--mainBlue);
         color: white;
         font-size: 1.4rem;
+        outline: none;
+        transition: background 0.5s;
+        transition: transform 0.5s;
+        border-radius: 3px;
     }
+    .homeButton:hover {
+        transform: scale(1.1);
+        background: var(--mainBlue);
+    }   
 `

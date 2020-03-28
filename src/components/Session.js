@@ -9,7 +9,7 @@ export default class Session extends Component {
                     <div className="col-12 col-md-6 col-lg-6">
                         <div className="sessionTextContainer mx-auto">
                             <h5 className="sessionTitle">
-                                Запазете Час
+                                Направете Запитване
                             </h5>
                             <p className="sessionText">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -72,6 +72,8 @@ const SessionWrapper = styled.div`
         width: 70%;
         .sessionTitle {
             color: var(--mainBlue);
+            font-weight: bold;
+            font-size: 1.5rem;
         }
         .sessionText {
             color: white;
@@ -80,16 +82,5 @@ const SessionWrapper = styled.div`
     .btn {
         background: var(--mainBlue);
         color: white;
-    }
-    iframe {
-        width: 100%;
-        overflow-y: none;
-        label {
-            padding: 0rem !important;
-            color: var(--mainGold) !important;
-        }
-        input {
-            padding: 0rem;
-        }
     }
 `

@@ -79,7 +79,7 @@ export default class Blog extends PureComponent {
 }
 
 const BlogWrapper = styled.div`
-    background: lightgrey;
+    background: gainsboro;
     padding: 1rem;
     padding-top: 5rem;
     .blogTitle {

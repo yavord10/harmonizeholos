@@ -17,7 +17,7 @@ export default function BlogItem(props) {
                 <h5 className="blogItemTitle">
                     {props.location.state.title}
                 </h5>
-                <p className="blogDate">Качено: <span className="gold">{props.location.state.date}</span></p>
+                <p className="blogDate"><span className="gold"><i className="far fa-clock"></i> {props.location.state.date}</span></p>
                 <img src={props.location.state.imageUrl} alt="" className="blogItemImg"/>
                 <div className="blogItemContent" dangerouslySetInnerHTML={{__html: element.innerHtml}}>
                     
@@ -60,7 +60,7 @@ const BlogItemWrapper = styled.div`
             margin-bottom: 0.2rem;
         }
         .gold {
-            color: var(--mainGold);
+            color: var(--mainBlue);
         }
     }
 `
