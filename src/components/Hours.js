@@ -15,7 +15,9 @@ export default function Hours() {
                 <p>Медитация, Соул Колаж, Хармонично Дишане, Консултации</p>
             </div>
             <h5 className="mb-3">Направете запитване:</h5>
-           <CustomForm />
+            <div className="formContainer container">
+                <CustomForm />
+            </div>
         </HoursWrapper>
     )
 }
@@ -31,6 +33,9 @@ const HoursWrapper = styled.div`
     h5 {
         margin-left: 1rem;
         color: var(--mainDark);
+    }
+    .formContainer {
+        width: 80%;
     }
     .sessionContainer {
         padding: 1rem;

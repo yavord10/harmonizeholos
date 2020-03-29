@@ -152,16 +152,18 @@ const NavBarWrapper = styled.div`
         text-decoration: none;
     }
     .btn {
-        color: var(--lightBlue) !important;
-        border-color: var(--lightBlue) !important;
+        color: white !important;
+        font-weight: 500;
+        border-color: none;
+        border-radius: 1px;
+        background: var(--mainGold);
         outline: none;
         oultine: 0
         cursor: pointer;
         transition: color 0.5s, border-color 0.5s, font-size 0.5s;
     }
     .btn:hover {
-        border-color: var(--mainBlue) !important;
-        color: var(--mainBlue) !important;
+        color: white !important;
         font-size: 1.1rem;
         outline: none;
     }

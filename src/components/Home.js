@@ -58,8 +58,8 @@ const HomeWrapper = styled.div`
     }
     .homeButton {
         margin-top: 1rem;
-        background var(--mainDark);
-        border: solid 2px var(--mainDark);
+        background rgba(58, 51, 71, 0.8);
+        border: none;
         color: white;
         font-size: 1.4rem;
         outline: none;
