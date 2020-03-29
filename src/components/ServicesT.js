@@ -56,29 +56,13 @@ export default class servicesSeparator extends Component {
                     <h3 className="servicesSeparatorText mx-auto" data-aos="fade-up">Методи</h3>
                     <div className="separator mx-auto" data-aos="fade-left"></div>
                 </div>
-                <div className="row mx-auto dotContainer" data-aos="zoom-in">
-                    <div className="dots row mx-auto" onClick={this.handleDot}>
-                        <div className={this.state.cardNumber === 1 ? "dot dot1 clicked" : "dot dot1"}>
-                            <div className="innerDot innerDot1"></div>
-                        </div>
-                        <div className={this.state.cardNumber === 2 ? "dot dot2 clicked" : "dot dot2"}>
-                            <div className="innerDot innerDot2"></div>
-                        </div>
-                        <div className={this.state.cardNumber === 3 ? "dot dot3 clicked" : "dot dot3"}>
-                            <div className="innerDot innerDot3"></div>
-                        </div>
-                        <div className={this.state.cardNumber === 4 ? "dot dot4 clicked" : "dot dot4"}>
-                            <div className="innerDot innerDot4"></div>
-                        </div>
-                    </div>
-                </div>
-                {this.state.cardNumber === 1 ? <ServiceCard img={holoImg} title={"Холотропно Дишане"} handleArrow={this.handleArrow}
+                {this.state.cardNumber === 1 ? <ServiceCard img={holoImg} title={"Холотропно Дишане"} handleArrow={this.handleArrow} state={this.state.cardNumber} handleDot={this.handleDot}
                 text={"Холотропното дишане e мощен метод за себеизследване и себепознание, има силен терапевтичен и изцелителен ефект посредством разтоварване и освобождаване на натрупани енергийни блокажи, осъзнаване на важни и основни човешки ценности, както и разширяване на съзнанието, в това число представата ни за самите себе си, другите и света. “Холотропно” буквално означава “движение към цялостност”. "}/> 
-                : this.state.cardNumber === 2 ? <ServiceCard img={soulImg} title={"Соул Колаж"} handleArrow={this.handleArrow}
+                : this.state.cardNumber === 2 ? <ServiceCard img={soulImg} title={"Соул Колаж"} handleArrow={this.handleArrow} state={this.state.cardNumber} handleDot={this.handleDot}
                 text={"Методът Соул Колаж е уникален метод за самопознание и себеизследване, който използва творческата страна на индивида, заедно с неговата интуиция и въображение. С помощта на създаваните карти-колажи всеки един постепенно открива различни аспекти от своята личност и обединявайки се с тях, оформя пъзела на цялостната си хармонична личност."} />
-                : this.state.cardNumber === 3 ? <ServiceCard img={meditateImg} title={"Медитация"} handleArrow={this.handleArrow}
+                : this.state.cardNumber === 3 ? <ServiceCard img={meditateImg} title={"Медитация"} handleArrow={this.handleArrow} state={this.state.cardNumber} handleDot={this.handleDot}
                 text={'Когато успеем да внесем осъзнато внимание в живота си, в това, което се проявява в настоящия момент, развиваме умението си за присъствие и приемане на настоящето и яснотата си. Възстановяваме пълнокръвната връзка с ритъма на живота, поемаме по пътя на грижата за собственото си здраве и благополучие. Медитацията е ефективен начин за дълбока релаксация на тялото и на ума.'}/> 
-                : this.state.cardNumber === 4 ? <ServiceCard img={harmonImg} title={'Хармонично Дишане'} handleArrow={this.handleArrow}
+                : this.state.cardNumber === 4 ? <ServiceCard img={harmonImg} title={'Хармонично Дишане'} handleArrow={this.handleArrow} state={this.state.cardNumber} handleDot={this.handleDot}
                 text={"Възможността да се учим да контролираме дишането си, като възпитаме нов модел на пълноценно, хармонично дишане, който да замени старите нефункционални навици на повърхностно и плитко дишане, означава да можем да влияем на физическото си и психическо здраве. Така, хармонизирането на дихателните ни навици е ключов фактор за възстановяване на естествения ни баланс, който включва тялото, енергията и ума ни."} />
                 : null }
             </ServicesTWrapper>
