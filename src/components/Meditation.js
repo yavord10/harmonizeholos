@@ -6,10 +6,10 @@ export default function Meditation() {
     return (
         <MeditationWrapper>
             <div className="meditationContainer">
-                <div className="imgContainer">
+                <div className="imgContainer" data-aos="zoom-in-down">
                     <h5 className="meditationTitle">Медитация</h5>
                 </div>
-                <div className="meditationText">
+                <div className="meditationText" data-aos="fade-up">
                     <p>
                         Да бъдем в присъствие и с осъзнатост е резултат от трениране на ума или с други думи това е друго ниво на живот, постижимо с помощта на много обикновена форма на медитация. Фокусирайки вниманието си за определен период от време върху начина на дишане – как въздуха навлиза и след това напуска тялото ни, може да ни помогне да променим качеството си на живот.
                     </p>

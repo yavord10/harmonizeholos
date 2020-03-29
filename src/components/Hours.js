@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export default function Hours() {
     return (
         <HoursWrapper>
-            <h3 className="hoursTitle">Резервация</h3>
+            <h3 className="hoursTitle" data-aos="flip-up">Резервация</h3>
             <div className="placeDiv p-3 mt-3">
                 <h5>На място:</h5>
                 <p>Медитация, Холотропно Дишане, Соул Колаж, Хармонично Дишане, Консултации</p>

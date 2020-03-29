@@ -9,12 +9,12 @@ export default class Services extends Component {
         return (
             <ServicesWrapper>
                 <div className="servicesSeparator">
-                    <h3 className="servicesSeparatorText mx-auto">Услуги</h3>
-                    <div className="separator mx-auto"></div>
+                    <h3 className="servicesSeparatorText mx-auto" data-aos="fade-up">Услуги</h3>
+                    <div className="separator mx-auto" data-aos="fade-left"></div>
                 </div>
                 <div className="servicesContainer row">
                     <div className="servicesCol col-10 col-md-3 col-lg-3 mx-auto">
-                        <div className="serviceCard mx-auto">
+                        <div className="serviceCard mx-auto" data-aos="flip-left">
                             <img src={meditate} alt="медитация"/>
                             <h5 className="serviceTitle">Медитация</h5>
                             <p className="serviceText">
@@ -23,8 +23,8 @@ export default class Services extends Component {
                             </p>
                         </div>
                     </div>
-                    <div className="servicesCol col-10 col-md-3 col-lg-3 mx-auto">
-                        <div className="serviceCard mx-auto">
+                    <div className="servicesCol col-10 col-md-3 col-lg-3 mx-auto" >
+                        <div className="serviceCard mx-auto" data-aos="flip-right">
                             <img src={lie} alt="холотропно дишане"/>
                             <h5 className="serviceTitle">Холотропно Дишане</h5>
                             <p className="serviceText">
@@ -34,7 +34,7 @@ export default class Services extends Component {
                         </div>
                     </div>
                     <div className="servicesCol col-10 col-md-3 col-lg-3 mx-auto">
-                        <div className="serviceCard mx-auto">
+                        <div className="serviceCard mx-auto" data-aos="flip-left">
                             <img src={draw} alt="соул колаж"/>
                             <h5 className="serviceTitle">Соул Колаж</h5>
                             <p className="serviceText">
@@ -44,7 +44,7 @@ export default class Services extends Component {
                         </div>
                     </div>
                     <div className="servicesCol col-10 col-md-3 col-lg-3 mx-auto">
-                        <div className="serviceCard mx-auto">
+                        <div className="serviceCard mx-auto" data-aos="flip-right">
                             <img src={draw} alt="соул колаж"/>
                             <h5 className="serviceTitle">Хармонично Дишане</h5>
                             <p className="serviceText">
@@ -62,6 +62,7 @@ export default class Services extends Component {
 const ServicesWrapper = styled.div`
     margin-bottom: 4rem;
     .serviceCard {
+        background: var(--lightBlue);
         margin-top: 3rem;
         padding: 1rem;
         box-shadow: 0px 2px 5px -2px rgba(0,0,0,0.2);

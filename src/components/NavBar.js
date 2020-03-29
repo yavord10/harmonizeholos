@@ -82,10 +82,7 @@ export default class NavBar extends Component {
                                 Контакти
                             </Link>
                         </ul>
-                        <form className="form-inline my-2 my-lg-0">
-                            <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-                        <button className="btn my-2 my-sm-0" type="submit"><i className="fas fa-search"></i></button>
-                        </form>
+                        <Link to="/методи" className="navbtnLink"><button className="reservationNav btn">Направете Запитване</button></Link>
                     </div>
                 </nav>
             </NavBarWrapper>
@@ -131,14 +128,24 @@ const NavBarWrapper = styled.div`
             color: white;
         }
     }
+    a, a:active, a:hover, a:focus, a:visited {
+        ouline: 0 !improtant;
+        outline: none !important;
+        text-decoration: none;
+    }
     .btn {
-        border-radius: 25px;
-        color: white !important;
-        border-color: white !important;
+        color: var(--lightBlue) !important;
+        border-color: var(--lightBlue) !important;
+        outline: none;
+        oultine: 0
+        cursor: pointer;
+        transition: color 0.5s, border-color 0.5s, font-size 0.5s;
     }
     .btn:hover {
-        background: var(--mainBlue);
-        color: white !important;
+        border-color: var(--mainBlue) !important;
+        color: var(--mainBlue) !important;
+        font-size: 1.1rem;
+        outline: none;
     }
     .dropdown-item {
         color: var(--mainBlue) !important;

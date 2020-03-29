@@ -6,26 +6,20 @@ export default function Holothropic() {
     return (
         <HolothropicWrapper>
             <div className="HolothropicContainer">
-                    <div className="imgContainer">
+                    <div className="imgContainer" data-aos="zoom-in-down">
                         <h5 className="HolothropicTitle">Холотропно Дишане</h5>
                     </div>
-                    <div className="row">
+                    <div className="holothropicText" data-aos="fade-up">
                         <p className="paragraph mx-auto">
                             Холотропното дишане представлява мощен метод за себеизследване и себепознание. В продължение на дълги години практика Кристина и Станислав Гроф развиват психологически метод, 
                             работещ с необичайни състояния на съзнанието, като предлагат много радикална алтернатива за изцеление. Тези състояния имат тенденцията да ангажират вътрешните ресурси на човека или така наречения 
                             „вътрешен целител“, което води до един напълно индивидуален процес. И чрез личното преживяване всеки един може да разбере повече за себе си и да се преоткрие.</p>
-                    </div>
-                    <div className="row">
                         <p className="paragraph mx-auto">
                             Методът включва специфична дихателна техника на учестено и задълбочено дишане, което се прилага в легнала позиция и със затворени очи, на фона на специално структурирана музика. 
                             След това сесията продължава с рисуване на мандали и завършва със споделяне на преживяването.</p>
-                    </div>
-                    <div className="row">
                         <p className="paragraph mx-auto">
                             Ефектът от прилагането на метода е изцеление в най-широк смисъл посредством разтоварване на натрупани енергийни блокажи и напрежение, 
                             разширяване на представата ни за света, себе си и другите, формиране на т.нар. холотропно съзнание.</p>
-                    </div>
-                    <div className="row">
                         <p className="paragraph mx-auto">
                         „Холотропно“ буквално означава „движение към цялостност“. В този смисъл холотропното съзнание е цялостно съзнание, т.е. обединяващо, приемащо многото и 
                         различните аспекти от човешката психика или с други думи многото и различни субличности, формиращи „Аз-а“ или личността ни.</p>
@@ -37,6 +31,8 @@ export default function Holothropic() {
 
 const HolothropicWrapper = styled.div`
     .HolothropicContainer {
+        padding: 2rem;
+        margin-top: 4rem;
         margin-bottom: 3rem;
         color: white;
         .HolothropicTitle {
@@ -53,7 +49,7 @@ const HolothropicWrapper = styled.div`
             background-repeat: no-repeat;
             background-size: cover;
             filter: grayscale(20%) brightness(80%);
-            padding: 8rem;
+            padding: 6rem;
             margin-bottom: 3rem;
             box-shadow: 0 0 10px var(--mainDark);
         }
@@ -63,7 +59,6 @@ const HolothropicWrapper = styled.div`
             width: 90%;
             padding-left: 1rem;
             text-align: left;
-            animation: show-left 1s ease-in-out;
         }
         .divider {
             height: 5rem;

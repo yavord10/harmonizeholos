@@ -10,7 +10,7 @@ export default class Home extends Component {
         return (
             <HomeWrapper>
                 <div className="imgContainer"/>
-                <div className="homeModal">
+                <div className="homeModal" data-aos="zoom-in">
                     <h3 className="homeTitle">Harmonize<span className="colorSpan">Holos</span></h3>
                     <p className="homeText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     <Link to="/методи"><button className="homeButton">Регистрация</button></Link>
@@ -65,6 +65,6 @@ const HomeWrapper = styled.div`
     }
     .homeButton:hover {
         transform: scale(1.1);
-        background: var(--mainBlue);
+        border: solid 4px var(--mainBlue);
     }   
 `

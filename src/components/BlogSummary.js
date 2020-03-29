@@ -10,7 +10,7 @@ export default function BlogSummary(props) {
                 pathname:`/статия/${props.blog.title}`,
                 state: props.blog
                 }} onClick={() => props.openBlog(props.blog)}>
-                <div className="summaryContainer">
+                <div className="summaryContainer" data-aos="fade-up">
                     <div className="summaryTitle">{props.blog.title}</div>
                     <div className="summaryBody">
                         <div className="imgContainer"></div>
@@ -56,9 +56,9 @@ const BlogSummaryWrapper = styled.div`
         padding: 1rem;
         color: var(--mainDark);
         background: var(--mainGold);
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         font-weight: bold;
-        font-family: 'Pattaya', sans-serif;
+        font-family: sans-serif;
     }
     }
     .imgContainer {

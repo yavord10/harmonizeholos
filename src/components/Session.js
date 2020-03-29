@@ -7,7 +7,7 @@ export default class Session extends Component {
             <SessionWrapper>
                 <div className="row">
                     <div className="col-12 col-md-6 col-lg-6">
-                        <div className="sessionTextContainer mx-auto">
+                        <div className="sessionTextContainer mx-auto" data-aos="zoom-in-right">
                             <h5 className="sessionTitle">
                                 Направете Запитване
                             </h5>
@@ -18,7 +18,7 @@ export default class Session extends Component {
                         </div>
                     </div>
                     <div className="col-12 col-md-6 col-lg-6">
-                        <div className="sessionContainer mx-auto">
+                        <div className="sessionContainer mx-auto" data-aos="zoom-in-up">
                             <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScTxho6Mik9N2aZTGnM-XrgfJTKpP3JX1jQ7ncN1RlUW63bLg/formResponse">
                                 <div className="form-group">
                                     <label htmlFor="exampleFormControlInput1">Име</label>

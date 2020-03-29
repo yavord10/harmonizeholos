@@ -13,9 +13,12 @@ import SoulCollage from './components/SoulCollage';
 import Footer from './components/Footer';
 import Contacts from './components/Contacts';
 import Hours from './components/Hours';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 function App() {
+  AOS.init({duration: 1200})
   return (
     <div className="App">
       <NavBar />
