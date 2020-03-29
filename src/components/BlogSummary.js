@@ -8,7 +8,10 @@ export default function BlogSummary(props) {
         <BlogSummaryWrapper className="col-12 col-lg-4 col-md-6 col-sm-6" img={props.blog.imageUrl}>
             <Link to={{
                 pathname:`/статия/${props.blog.title}`,
-                state: props.blog
+                state: {
+                    blog: props.blog, 
+                    blogs: props.blogs
+                }
                 }} onClick={() => props.openBlog(props.blog)}>
                 <div className="summaryContainer" data-aos="fade-up">
                     <div className="summaryTitle">{props.blog.title}</div>

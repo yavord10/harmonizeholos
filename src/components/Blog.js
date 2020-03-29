@@ -62,7 +62,7 @@ export default class Blog extends PureComponent {
             <BlogWrapper className="row">
                 {this.state.blogArray.length > 0 ? this.state.blogArray.map((blog) => {
                     return (
-                        <BlogSummary key={blog.id} blog={blog} openBlog={this.openBlog}/>
+                        <BlogSummary key={blog.id} blog={blog} openBlog={this.openBlog} blogs={this.state.blogArray}/>
                     )
                 }) : <div className="loadingContainer">
                         <div className="dotContainer row">
