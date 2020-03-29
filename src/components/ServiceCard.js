@@ -15,10 +15,10 @@ export default function ServiceCard(props) {
                         </div>
                         <div className="col-12 col-md-6 col-lg-6 serviceCol">
                             <div className="textContainer mx-auto">
-                                <div className="serviceSeparator mx-auto"/>
                                 <h5 className="serviceTitle">
                                     {props.title}
                                 </h5>
+                                <div className="serviceSeparator mx-auto"/>
                                 <p className="serviceText">
                                     {props.text}
                                 </p>
@@ -71,12 +71,13 @@ const ServiceCardWrapper = styled.div`
         .serviceSeparator {
             width: 5%;
             border: solid 3px var(--mainBlue);
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
             border-radius: 10px;
+            margin-top: 1rem;
         }
         .serviceTitle {
-            color: var(--mainGold);
-            font-size: 1.5rem;
+            color: var(--mainDark);
+            font-size: 1.8rem;
         }
         animation: zoom-in 0.5s ease-in-out;
     }

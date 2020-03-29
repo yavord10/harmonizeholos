@@ -44,7 +44,7 @@ export default class CustomForm extends Component {
                         <div className="form-group">
                             <input type="checkbox" className="checkBox1" name="entry.503765045" value="Желая да получавам допълтнителна информация по емейл" onClick={this.handleCheckBox}/><label htmlFor="exampleFormControlSelect1" className="ml-1">Желая да получавам информация по емейл</label>
                         </div>
-                        <div className="form-group">
+                        <div className="form-group lastCheckbox">
                             <input type="checkbox" className="checkBox2" name="entry.503765045" value="Не желая да получавам информация по емейл" onClick={this.handleCheckBox}/><label htmlFor="exampleFormControlSelect1" className="ml-1">Не желая да получавам информация по емейл</label>
                         </div>
                         <button type="submit" className="btn">Изпрати</button>
@@ -62,6 +62,9 @@ const CustomFormWrapper = styled.div`
         box-shadow: 1px 1px 10px -5px grey;
         background: white;
         overflow-y: none;
+    }
+    .lastCheckbox {
+        margin-top: -1rem;
     }
     .btn {
         background: var(--mainBlue);
