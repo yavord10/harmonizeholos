@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import CustomForm from './CustomForm'
 
 export default class Session extends Component {
     render() {
@@ -18,35 +19,7 @@ export default class Session extends Component {
                         </div>
                     </div>
                     <div className="col-12 col-md-6 col-lg-6">
-                        <div className="sessionContainer mx-auto" data-aos="zoom-in-up">
-                            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScTxho6Mik9N2aZTGnM-XrgfJTKpP3JX1jQ7ncN1RlUW63bLg/formResponse">
-                                <div className="form-group">
-                                    <label htmlFor="exampleFormControlInput1">Име</label>
-                                    <input type="text" className="form-control quantumWizTextinputPaperinputInput exportInput" id="exampleFormControlInput1" name="entry.1045781291" placeholder="Име" />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="exampleFormControlInput1">Презиме</label>
-                                    <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Презиме" />
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="exampleFormControlInput1">Имейл Адрес</label>
-                                    <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="entry.1065046570"/>
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="exampleFormControlSelect1">Сесия</label>
-                                    <select className="form-control" id="exampleFormControlSelect1">
-                                        <option>Холотропно Дишане</option>
-                                        <option>Медитация</option>
-                                        <option>Соул Колаж</option>
-                                    </select>
-                                </div>
-                                <div className="form-group">
-                                    <label htmlFor="exampleFormControlInput1">Час</label>
-                                    <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="19:30" />
-                                </div>
-                                <button type="submit" className="btn">Прати</button>
-                            </form>
-                        </div>
+                        <CustomForm />
                     </div>
                 </div>
             </SessionWrapper>
@@ -60,13 +33,6 @@ const SessionWrapper = styled.div`
         padding: 2rem;
         box-shadow: inset 0 0 10px grey;
     }
-    .sessionContainer {
-        padding: 1rem;
-        width: 80%;
-        box-shadow: 1px 1px 10px -5px grey;
-        background: white;
-        overflow-y: none;
-    }
     .sessionTextContainer {
         margin-top: 10rem;
         width: 70%;
@@ -78,9 +44,5 @@ const SessionWrapper = styled.div`
         .sessionText {
             color: white;
         }
-    }
-    .btn {
-        background: var(--mainBlue);
-        color: white;
     }
 `

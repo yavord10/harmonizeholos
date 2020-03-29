@@ -9,7 +9,7 @@ export default class Services extends Component {
         return (
             <ServicesWrapper>
                 <div className="servicesSeparator">
-                    <h3 className="servicesSeparatorText mx-auto" data-aos="fade-up">Услуги</h3>
+                    <h3 className="servicesSeparatorText mx-auto" data-aos="fade-up">Методи</h3>
                     <div className="separator mx-auto" data-aos="fade-left"></div>
                 </div>
                 <div className="servicesContainer row">

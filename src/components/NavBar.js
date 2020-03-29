@@ -57,16 +57,17 @@ export default class NavBar extends Component {
                             </Link>
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" onClick={() => this.toggleDropDown()}>
-                                    Услуги
+                                    Методи
                                 </a>
                                 <div className={this.state.dropdown ? "dropdown-menu" : "hidden"} onClick={() => this.toggleDropDown()}>
-                                    <Link to="соулколаж" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Соул Колаж</Link>
-                                    <Link to="холотропнодишане" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Холотропно дишане</Link>
+                                    <Link to="/соулколаж" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Соул Колаж</Link>
+                                    <Link to="/холотропнодишане" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Холотропно дишане</Link>
                                     <Link to="/медитация" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Медитация</Link>
+                                    <Link to="/хармоничнодишане" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Хармонично дишане</Link>
                                 </div>
                             </li>
-                            <Link to="/методи" className="nav-item" onClick={() => window.scrollTo(0,0)}>
-                                <li className="nav-link">Методи</li>
+                            <Link to="/услуги" className="nav-item" onClick={() => window.scrollTo(0,0)}>
+                                <li className="nav-link">Услуги</li>
                             </Link>
                             <Link to="/блог" onClick={() => window.scrollTo(0,0)}>
                                 <li className="nav-item nav-link">

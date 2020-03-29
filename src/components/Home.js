@@ -12,8 +12,9 @@ export default class Home extends Component {
                 <div className="imgContainer"/>
                 <div className="homeModal" data-aos="zoom-in">
                     <h3 className="homeTitle">Harmonize<span className="colorSpan">Holos</span></h3>
-                    <p className="homeText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <Link to="/методи"><button className="homeButton">Регистрация</button></Link>
+                    <p className="homeText">Или как да бъдем по-хармонични и цялостни, как да живеем по-хармонично и цялостно, как отношенията ни да бъдат по-хармонични и цялостни, 
+                    как обкръжението ни да бъде по-хармонично и цялостно? Всичко започва от самите нас – осъзнаването, промяната, израстването, еволюцията!</p>
+                    <Link to="/услуги"><button className="homeButton">Регистрация</button></Link>
                 </div>
                 <Services />
                 <Session />
@@ -44,27 +45,27 @@ const HomeWrapper = styled.div`
         z-index: 1;
         padding: 1rem;
         position: absolute;
-        bottom: 40%;
+        bottom: 8%;
         left: 25%;
         width: 50%;
     }
     .homeText {
-        color: var(--mainBlue);
+        color: white;
         font-weight: bold;
     }
     .homeButton {
-        margin-top: 1rem;
-        background none;
-        border: solid 2px var(--mainBlue);
+        margin-top: 8rem;
+        background var(--mainDark);
+        border: solid 2px var(--mainDark);
         color: white;
         font-size: 1.4rem;
         outline: none;
         transition: background 0.5s;
-        transition: transform 0.5s;
+        transition: font-size 0.5s;
         border-radius: 3px;
+        padding: 0.5rem;
     }
     .homeButton:hover {
-        transform: scale(1.1);
-        border: solid 4px var(--mainBlue);
+        font-size: 1.6rem;
     }   
 `
