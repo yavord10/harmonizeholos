@@ -61,9 +61,15 @@ const MeditationWrapper = styled.div`
             background-repeat: no-repeat;
             background-size: cover;
             filter: grayscale(20%) brightness(80%);
-            padding: 6rem;
-            margin-bottom: 1rem;
+            padding: 1rem;
+            padding-top: 5rem;
+            padding-bottom: 4rem;
             box-shadow: 0 0 10px var(--mainDark);
+        }
+    }
+    @media (max-width: 500px) {
+        .meditationTitle {
+            font-size: 2rem;
         }
     }
 `

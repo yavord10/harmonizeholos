@@ -34,6 +34,23 @@ export default class NavBar extends Component {
             })
         }
     }
+    handleClick = (e) => {
+        let stateToggle = this.state.toggle;
+        if ((e.target.className === "fas fa-bars") || (e.target.className === "navbar-toggler")) {
+            this.setState(() => {
+                return{
+                    toggle: true
+                }
+            })
+        }
+        if ((stateToggle === true) && (e.target.className != "nav-link dropdown-toggle")) { 
+            this.setState(() => {
+                return{
+                    toggle: false
+                }
+            })
+        }
+    }
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll); 
     }
@@ -42,13 +59,13 @@ export default class NavBar extends Component {
     }
     render() {
         return (
-            <NavBarWrapper>
+            <NavBarWrapper onClick={this.handleClick}>
                 <nav className={this.state.scrolled ? "navbar navbar-expand-lg fixed-top coloredNav" : "navbar navbar-expand-lg fixed-top topColorNav"} onScroll={() => console.log('scrolled')}>
                     <Link to="/" className="navbar-brand"><span className="white">Harmonize</span>Holos</Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+                        {this.state.toggle ? <i className="fas fa-times"/> : <i className="fas fa-bars"/> }
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div className={this.state.toggle ? "navbar-collapse" : "navbar-collapse collapse ml-auto"} id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
                             <Link to="/" onClick={() => window.scrollTo(0,0)}>
                                 <li className="nav-item nav-link">
@@ -60,8 +77,8 @@ export default class NavBar extends Component {
                                     Методи
                                 </a>
                                 <div className={this.state.dropdown ? "dropdown-menu" : "hidden"} onClick={() => this.toggleDropDown()}>
-                                    <Link to="/соулколаж" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Соул Колаж</Link>
                                     <Link to="/холотропнодишане" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Холотропно дишане</Link>
+                                    <Link to="/соулколаж" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Соул Колаж</Link>
                                     <Link to="/медитация" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Медитация</Link>
                                     <Link to="/хармоничнодишане" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Хармонично дишане</Link>
                                 </div>
@@ -83,7 +100,7 @@ export default class NavBar extends Component {
                                 Контакти
                             </Link>
                         </ul>
-                        <Link to="/методи" className="navbtnLink"><button className="reservationNav btn">Направете Запитване</button></Link>
+                        <Link to="/услуги" className="navbtnLink"><button className="reservationNav btn">Направете Запитване</button></Link>
                     </div>
                 </nav>
             </NavBarWrapper>
@@ -163,5 +180,16 @@ const NavBarWrapper = styled.div`
     .nav-link: hover {
         background-color: var(--lightBlue);
         color: var(--mainDark);
+    }
+    .navbar-toggler-icon {
+        color: white !important;
+    }
+    .fas {
+        color: white !important;
+    }
+    @media (max-width: 992px) {
+        .navbar-collapse {
+            padding: 1rem;
+        }
     }
 `

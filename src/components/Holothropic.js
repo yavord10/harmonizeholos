@@ -42,6 +42,10 @@ const HolothropicWrapper = styled.div`
             margin-top: 3rem;
             margin-bottom: 3rem;
         }
+        .holothropicText {
+            padding: 2rem;
+            text-align: left;
+        }
         .imgContainer {
             z-index: -1;
             background-image: url(${img});
@@ -49,15 +53,14 @@ const HolothropicWrapper = styled.div`
             background-repeat: no-repeat;
             background-size: cover;
             filter: grayscale(20%) brightness(80%);
-            padding: 6rem;
-            margin-bottom: 3rem;
+            padding: 1rem;
+            padding-top: 5rem;
+            padding-bottom: 4rem;
             box-shadow: 0 0 10px var(--mainDark);
         }
         .paragraph {
             margin-bottom: 2rem;
             color: var(--mainDark) !important;
-            width: 90%;
-            padding-left: 1rem;
             text-align: left;
         }
         .divider {

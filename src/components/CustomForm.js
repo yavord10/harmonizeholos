@@ -39,7 +39,7 @@ export default class CustomForm extends Component {
                         </div>
                         <div className="form-group">
                             <label htmlFor="exampleFormControlInput1">Запитване</label>
-                            <textarea type="text" className="form-control" id="exampleFormControlInput1" name="entry.2032084411"></textarea>
+                            <textarea type="text" className="form-control" id="exampleFormControlInput1" name="entry.2032084411" placeholder="Вашето запитване..."></textarea>
                         </div>
                         <div className="form-group">
                             <input type="checkbox" className="checkBox1" name="entry.503765045" value="Желая да получавам допълтнителна информация по емейл" onClick={this.handleCheckBox}/><label htmlFor="exampleFormControlSelect1" className="ml-1">Желая да получавам информация по емейл</label>

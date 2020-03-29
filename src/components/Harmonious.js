@@ -55,12 +55,13 @@ const HarmoniousWrapper = styled.div`
         .imgContainer {
             z-index: -1;
             background-image: url(${img});
-            background-position: 50% 80%;
+            background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             filter: grayscale(20%) brightness(80%);
-            padding: 6rem;
-            margin-bottom: 1rem;
+            padding: 1rem;
+            padding-top: 5rem;
+            padding-bottom: 4rem;
             box-shadow: 0 0 10px var(--mainDark);
         }
     }

@@ -13,12 +13,17 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="col">
-                    <div>
-                        <Link to="/медитация" onClick={() => window.scrollTo(0,0)}><p>Медитация</p></Link>
-                        <Link to="/соулколаж" onClick={() => window.scrollTo(0,0)}><p>Соул Колаж</p></Link>
-                        <Link to="/холотропнодишане" onClick={() => window.scrollTo(0,0)}><p>Холотропно Дишане</p></Link>
-                        <Link to="/замен" onClick={() => window.scrollTo(0,0)}><p>За мен</p></Link>
-                        <Link to="/контакти" onClick={() => window.scrollTo(0,0)}><p>Контакти</p></Link>
+                    <div className="row">
+                        <div className="col">
+                            <Link to="/холотропнодишане" onClick={() => window.scrollTo(0,0)}><p>Холотропно Дишане</p></Link>
+                            <Link to="/соулколаж" onClick={() => window.scrollTo(0,0)}><p>Соул Колаж</p></Link>
+                            <Link to="/медитация" onClick={() => window.scrollTo(0,0)}><p>Медитация</p></Link>
+                        </div>
+                        <div className="col">
+                            <Link to="/хармоничнодишане" onClick={() => window.scrollTo(0,0)}><p>Хармонично Дишане</p></Link>
+                            <Link to="/замен" onClick={() => window.scrollTo(0,0)}><p>За мен</p></Link>
+                            <Link to="/контакти" onClick={() => window.scrollTo(0,0)}><p>Контакти</p></Link>
+                        </div>
                     </div>
                 </div>
                 <div className="col">

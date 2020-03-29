@@ -9,11 +9,11 @@ export default function AboutMe() {
             <div className="">
                 <div className="row mb-3 headerRow">
                     <div className="mx-auto">
-                        <div className="row">
-                            <div className="col">
+                        <div className="row smallerRow">
+                            <div className="col-5 mx-auto">
                                 <div className="aboutMeImg mx-auto" data-aos="flip-up"/>
                             </div>
-                            <div className="col" data-aos="zoom-in-left">
+                            <div className="col-5 mx-auto" data-aos="zoom-in-left">
                                 <h5 className="aboutMeTitle">Ели Димитрова</h5> 
                                 <p className="mb-1">Психолог-консултант</p>
                                 <p className="mb-3">Фасилитатор:</p>
@@ -47,7 +47,7 @@ const AboutMeWrappr = styled.div`
         fitler: grayscale(20%) brightness(70%);
         box-shadow: 2px 2px 10px -5px grey;
     }
-    .col {
+    .col-5 {
         margin-bottom: 5rem;
         margin-top: 5rem;
     }

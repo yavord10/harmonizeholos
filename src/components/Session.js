@@ -39,10 +39,15 @@ const SessionWrapper = styled.div`
         .sessionTitle {
             color: var(--mainBlue);
             font-weight: bold;
-            font-size: 1.5rem;
+            font-size: 2rem;
         }
         .sessionText {
             color: white;
+        }
+    }
+    @media (max-width: 767px) {
+        .sessionTextContainer {
+            margin-top: 0rem;
         }
     }
 `
