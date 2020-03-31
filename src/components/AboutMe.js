@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import img from '../Eli.jpg'
+import img from '../Eli.jpeg'
 import Certificates from './Certificates'
 
 export default function AboutMe() {

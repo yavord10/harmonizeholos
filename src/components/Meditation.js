@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import img from '../meditate-bg.jpg'
 
 export default function Meditation() {
+    window.scrollTo(0,0)
     return (
         <MeditationWrapper>
             <div className="meditationContainer">

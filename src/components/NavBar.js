@@ -6,20 +6,39 @@ export default class NavBar extends Component {
     constructor() {
         super();
         this.state = {
-            dropdown: false,
+            dropdownMethods: false,
+            dropdownServices: false,
             scrolled: false
         }
     }
-    toggleDropDown = () => {
-        if (this.state.dropdown === false) {
-            this.setState({
-                dropdown: true
-            })
-        } else {
-            this.setState({
-                dropdown: false
-            })
-        } 
+    toggleDropDown = (e) => {
+        if (e  === "Methods") {
+            if (this.state.dropdownMethods === false) {
+                this.setState({
+                    dropdownMethods: true
+                })
+                this.setState({
+                    dropdownServices: false
+                })
+            } else {
+                this.setState({
+                    dropdownMethods: false
+                })
+            } 
+        } else if (e === "Services") {
+            if (this.state.dropdownServices === false) {
+                this.setState({
+                    dropdownServices: true
+                })
+                this.setState({
+                    dropdownMethods: false
+                })
+            } else {
+                this.setState({
+                    dropdownServices: false
+                })
+            } 
+        }
     }
     handleScroll = () => {
         let topOfPage = window.pageYOffset;
@@ -73,19 +92,26 @@ export default class NavBar extends Component {
                                 </li>
                             </Link>
                             <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" onClick={() => this.toggleDropDown()}>
+                                <a className="nav-link dropdown-toggle" onClick={() => this.toggleDropDown("Methods")}>
                                     Методи
                                 </a>
-                                <div className={this.state.dropdown ? "dropdown-menu" : "hidden"} onClick={() => this.toggleDropDown()}>
+                                <div className={this.state.dropdownMethods ? "dropdown-menu" : "hidden"} onClick={() => this.toggleDropDown("Methods")}>
                                     <Link to="/холотропнодишане" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Холотропно дишане</Link>
                                     <Link to="/соулколаж" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Соул Колаж</Link>
                                     <Link to="/медитация" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Медитация</Link>
                                     <Link to="/хармоничнодишане" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Хармонично дишане</Link>
                                 </div>
                             </li>
-                            <Link to="/услуги" className="nav-item" onClick={() => window.scrollTo(0,0)}>
-                                <li className="nav-link">Услуги</li>
-                            </Link>
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" onClick={() => this.toggleDropDown("Services")}>
+                                    Услуги
+                                </a>
+                                <div className={this.state.dropdownServices ? "dropdown-menu" : "hidden"} onClick={() => this.toggleDropDown("Services")}>
+                                    <Link to="/услуги/консултации" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Психологическо Консултиране</Link>
+                                    <Link to="/услуги/психотерапия" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Психотерапия</Link>
+                                    <Link to="/услуги/личностноразвитие" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Личностно развитие</Link>
+                                </div>
+                            </li>
                             <Link to="/блог" onClick={() => window.scrollTo(0,0)}>
                                 <li className="nav-item nav-link">
                                     Блог

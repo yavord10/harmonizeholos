@@ -13,8 +13,8 @@ export default class Session extends Component {
                                 Направете Запитване
                             </h5>
                             <p className="sessionText">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Каквото и да се върти в главата ви, не се колебайте да отправите своите въпроси. Ще се радвам да мога бъда от полза и 
+                                вярвам, че заедно можем да открием търсените отговори. Понякога се иска кураж, за да направим първата стъпка!
                             </p>
                         </div>
                     </div>

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import img from '../holo-bg.jpg'
 
 export default function Holothropic() {
+    window.scrollTo(0,0)
     return (
         <HolothropicWrapper>
             <div className="HolothropicContainer">

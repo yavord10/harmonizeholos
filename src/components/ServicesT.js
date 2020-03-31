@@ -85,10 +85,18 @@ export default class servicesSeparator extends Component {
                     <h3 className="servicesSeparatorText mx-auto" data-aos="fade-up">Методи</h3>
                     <div className="separator mx-auto" data-aos="fade-left"></div>
                 </div>
-                {this.state.cardNumber === 1 ? <ServiceCard prev={this.state.cardInfo[3]} info={this.state.cardInfo[0]} next={this.state.cardInfo[1]} handleArrow={this.handleArrow} state={this.state.cardNumber} handleDot={this.handleDot} /> 
-                : this.state.cardNumber === 2 ? <ServiceCard prev={this.state.cardInfo[0]} info={this.state.cardInfo[1]} next={this.state.cardInfo[2]} handleArrow={this.handleArrow} state={this.state.cardNumber} handleDot={this.handleDot} />
-                : this.state.cardNumber === 3 ? <ServiceCard prev={this.state.cardInfo[1]} info={this.state.cardInfo[2]} next={this.state.cardInfo[3]} handleArrow={this.handleArrow} state={this.state.cardNumber} handleDot={this.handleDot} />
-                : this.state.cardNumber === 4 ? <ServiceCard prev={this.state.cardInfo[2]} info={this.state.cardInfo[3]} next={this.state.cardInfo[0]} handleArrow={this.handleArrow} state={this.state.cardNumber} handleDot={this.handleDot} />
+                {this.state.cardNumber === 1 ? <ServiceCard prev={this.state.cardInfo[3]} info={this.state.cardInfo[0]} 
+                next={this.state.cardInfo[1]} handleArrow={this.handleArrow} state={this.state.cardNumber} 
+                handleDot={this.handleDot} link={"холотропнодишане"}/> 
+                : this.state.cardNumber === 2 ? <ServiceCard prev={this.state.cardInfo[0]} info={this.state.cardInfo[1]} next={this.state.cardInfo[2]} 
+                handleArrow={this.handleArrow} state={this.state.cardNumber} 
+                handleDot={this.handleDot} link={"соулколаж"}/>
+                : this.state.cardNumber === 3 ? <ServiceCard prev={this.state.cardInfo[1]} info={this.state.cardInfo[2]} next={this.state.cardInfo[3]} 
+                handleArrow={this.handleArrow} state={this.state.cardNumber} 
+                handleDot={this.handleDot} link={"медитация"}/>
+                : this.state.cardNumber === 4 ? <ServiceCard prev={this.state.cardInfo[2]} info={this.state.cardInfo[3]} next={this.state.cardInfo[0]} 
+                handleArrow={this.handleArrow} state={this.state.cardNumber} 
+                handleDot={this.handleDot} link={"хармоничнодишане"}/>
                 : null }
             </ServicesTWrapper>
         )
@@ -151,8 +159,14 @@ const ServicesTWrapper = styled.div`
     }
     #clicked {
         .shadowRow {
+            animation: move-right 0.5s ease-in;
             .shadowRow {
                 animation: move-right 0.5s ease-in;
+                animation-delay: 0.1s;
+                .shadowRow {
+                    animation: move-right 0.5s ease-in;
+                    animation-delay: 0.2s;
+                }
             }
         }
     }

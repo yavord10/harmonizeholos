@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import img from '../harmonious.jpg'
 
 export default function Harmonious() {
+    window.scrollTo(0,0)
     return (
         <HarmoniousWrapper>
             <div className="HarmoniousContainer">

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import img from '../soul-bg.jpg'
 
 export default function SoulCollage() {
+    window.scrollTo(0,0)
     return (
         <SoulCollageWrapper>
             <div className="SoulCollageContainer">

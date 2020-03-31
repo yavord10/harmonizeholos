@@ -16,6 +16,9 @@ import Hours from './components/Hours';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Harmonious from './components/Harmonious';
+import Consultation from './components/Consultation';
+import Therapy from './components/Therapy';
+import Personal from './components/Personal';
 
 
 function App() {
@@ -32,6 +35,9 @@ function App() {
         <Route path="/соулколаж" component={SoulCollage} />
         <Route path="/хармоничнодишане" component={Harmonious} />
         <Route path="/контакти" component={Contacts} />
+        <Route path="/услуги/консултации" component={Consultation} />
+        <Route path="/услуги/психотерапия" component={Therapy} />
+        <Route path="/услуги/личностноразвитие" component={Personal} />
         <Route path="/услуги" component={Hours} />
         <Route path="/статия/:blog" component={BlogItem} />
       </Switch>

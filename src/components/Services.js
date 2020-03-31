@@ -14,14 +14,14 @@ export default class Services extends Component {
                     <div className="servicesCol col-10 col-md-4 col-lg-4 mx-auto">
                         <div className="serviceCard mx-auto" data-aos="flip-left">
                             <i className="fas fa-lightbulb"></i>
-                            <h5 className="serviceTitle">Психологически консултации</h5>
+                            <h5 className="serviceTitle">Психологическо консултиране</h5>
                             <div className="serviceText">
                                 Психологическото консултиране е подход, ориентиран към оказване на краткосорчна психологическа помощ във връзка с преодоляване на конкретна 
                                 трудност или проблем на клиента. 
                                 <p className="personalParagraph">
                                     Обикновено в рамките на няколко сесии се постига по-голяма яснота по отношение на възможностите за справяне със ситуацията и/или проблема.
                                 </p>
-                                <Link to="/услуги"><button className="serviceCardBtn mx-auto btn">Прочетете Повече</button></Link>
+                                <Link to="/услуги/консултации"><button className="serviceCardBtn mx-auto btn">Прочетете Повече</button></Link>
                             </div>
                         </div>
                     </div>
