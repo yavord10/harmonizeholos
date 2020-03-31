@@ -38,7 +38,7 @@ export default class Services extends Component {
                                 </p>
                                 <p className="">За провеждането на индивидуални сесии <span className="green">на място или онлайн</span> е необходимо лично договаряне.</p>
                             </div>
-                            <Link to="/услуги"><button className="serviceCardBtn mx-auto btn">Прочетете Повече</button></Link>
+                            <Link to="/услуги/психотерапия"><button className="serviceCardBtn mx-auto btn">Прочетете Повече</button></Link>
                         </div>
                     </div>
                     <div className="servicesCol col-10 col-md-4 col-lg-4 mx-auto">
@@ -52,7 +52,7 @@ export default class Services extends Component {
                                 <p className="my-0">Медитация</p>
                                 <p className="mb-3">Хармонично Дишане</p>
                                 <p className="personalParagraph">За провеждането на индивидуални сесии <span className="green">на място или онлайн</span> е необходимо лично договаряне.</p>
-                                <Link to="/услуги"><button className="serviceCardBtn mx-auto btn">Прочетете Повече</button></Link>
+                                <Link to="/услуги/личностноразвитие"><button className="serviceCardBtn mx-auto btn">Прочетете Повече</button></Link>
                             </div>
                         </div>
                     </div>

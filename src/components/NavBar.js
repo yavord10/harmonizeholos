@@ -126,7 +126,7 @@ export default class NavBar extends Component {
                                 Контакти
                             </Link>
                         </ul>
-                        <Link to="/услуги" className="navbtnLink"><button className="reservationNav btn">Направете Запитване</button></Link>
+                        <Link to="/резервация" className="navbtnLink"><button className="reservationNav btn">Направете Запитване</button></Link>
                     </div>
                 </nav>
             </NavBarWrapper>

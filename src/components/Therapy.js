@@ -9,7 +9,7 @@ export default function Therapy() {
                 <h3 className="consTitle" data-aos="zoom-in-right">
                     Психотерапия
                 </h3>
-                <div className="consText">
+                <div className="consText container">
                     <p className="consP">
                         Психотерапията предлага възможност да изследвате своите мисли, емоции и преживявания в безопасна и подкрепяща среда, в 
                         която може да се срещнете и отработите осъзнаването на трудни и болезнени ситуации. Тази дълбинна работа може да бъде 

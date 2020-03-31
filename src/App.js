@@ -38,7 +38,7 @@ function App() {
         <Route path="/услуги/консултации" component={Consultation} />
         <Route path="/услуги/психотерапия" component={Therapy} />
         <Route path="/услуги/личностноразвитие" component={Personal} />
-        <Route path="/услуги" component={Hours} />
+        <Route path="/резервация" component={Hours} />
         <Route path="/статия/:blog" component={BlogItem} />
       </Switch>
       <Footer />
