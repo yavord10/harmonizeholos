@@ -24,20 +24,21 @@ export default function BlogItem(props) {
             <div className="row">
                 {props.location.state.blog.title ? 
                     <React.Fragment>
-                        <div className="col-12 relatedHeadingCol">
-                            <p className="relatedHeading">Още по темата <span className="pink">{props.location.state.blog.field}</span></p>
-                        </div>
-                        <div className="container col-12 col-lg-9 col-md-9 mainColumn">
-                            <p className="blogItemTag">{props.location.state.blog.field}</p>
-                            <h5 className="blogItemTitle">
-                                {props.location.state.blog.title}
-                            </h5>
+                        <div className="container col-12 col-lg-8 col-md-8 mainColumn mx-auto">
+                            <div className="blogItemHeading">
+                                <p className="blogItemTag" data-aos="fade-right">{props.location.state.blog.field}</p>
+                                <h5 className="blogItemTitle" data-aos="zoom-in">
+                                    {props.location.state.blog.title}
+                                </h5>
+                            </div>
                             <p className="blogDate"><span className="gold"><i className="far fa-clock"></i> {props.location.state.blog.date}</span></p>
-                            <img src={props.location.state.blog.imageUrl} alt="" className="blogItemImg"/>
-                            <div className="blogItemContent" dangerouslySetInnerHTML={{__html: element.innerHtml}}>    
+                            <img src={props.location.state.blog.imageUrl} alt="" className="blogItemImg" data-aos="fade-up"/>
+                            <div className="blogItemContent" dangerouslySetInnerHTML={{__html: element.innerHtml}} data-aos="fade-right">    
                             </div>
                         </div> 
-                        {relatedBlogs.length > 0 ? <div className="col-12 col-lg-3 col-md-3 mainColumn">
+                        {relatedBlogs.length > 0 ? <div className="col-12 col-lg-3 col-md-4 mainColumn mx-auto sideColumn">
+                            <p className="relatedHeading">Още по темата</p>
+                            <div className="separator"></div>
                             {relatedBlogs.length > 0 ? relatedBlogs.map(blog => {
                                 return (
                                     <Link to={{
@@ -47,7 +48,7 @@ export default function BlogItem(props) {
                                             blogs: props.location.state.blogs
                                         }
                                         }}>
-                                        <div className="relatedContentCard">
+                                        <div className="relatedContentCard" data-aos="fade-up">
                                             <p className="relatedContentTitle">
                                                 {blog.title}
                                             </p>
@@ -66,6 +67,7 @@ export default function BlogItem(props) {
 
 const BlogItemWrapper = styled.div`
     margin-top: 3rem;
+    padding-left: 0rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
     .mainColumn {
@@ -75,24 +77,27 @@ const BlogItemWrapper = styled.div`
         color: var(--mainBlue);
     }
     .relatedHeading {
-        text-align:right;
-        color: white;
+        text-align: center;
+        color: var(--mainBlue);
         font-weight: bold;
-        margin-right: 1rem;
+        font-size: 1.7rem;
+        font-family: 'Pattaya', sans-serif !important;
     }
-    .relatedHeadingCol {
-        background: var(--mainGold);
-        padding-top: 1rem;
+    .separator {
+        margin-top: -0.5rem;
+        border: solid 4px var(--mainDark);
+        border-radius: 10px;
+        width: 100%;
         margin-bottom: 1rem;
-        box-shadow: 0px 0px 10px grey;
     }
     .relatedContentCard {
         padding-bottom: 1rem;
         margin-bottom: 1rem;
         box-shadow: 0px 0px 10px -5px lightgrey;
-        background: var(--lightBlue);
+        background: white;
         border-radius: 3px;
         transition: transform 0.5s;
+        box-shadow: 0 0 10px grey;
         img {
             width: 90%;
             height: 10rem;
@@ -101,7 +106,7 @@ const BlogItemWrapper = styled.div`
             border-top-left-radius: 3px;
             border-top-right-radius: 3px;
             padding: 0.5rem;
-            background: var(--mainDark);
+            background: var(--mainGold);
             color: white;
             font-family: 'Pattaya', sans-serif !important;
             transition: background 0.5s;
@@ -124,9 +129,8 @@ const BlogItemWrapper = styled.div`
         .blogItemImg {
             width: 100%;
             height: auto;
-            box-shadow: 0px 0px 10px var(--lightBlue);
+            box-shadow: 0px 0px 10px grey;
             filter: grayscale(10%) brightness(90%);
-            margin-left: 0.5rem;
         }
         .blogItemContent {
             padding: 1rem;

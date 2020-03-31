@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import meditate from '../meditate.png'
-import lie from '../lie.png'
-import draw from '../draw.png'
 
 export default class Services extends Component {
     render() {
@@ -13,47 +11,49 @@ export default class Services extends Component {
                     <div className="separator mx-auto" data-aos="fade-left"></div>
                 </div>
                 <div className="servicesContainer row">
-                    <div className="servicesCol col-10 col-md-3 col-lg-3 mx-auto">
+                    <div className="servicesCol col-10 col-md-4 col-lg-4 mx-auto">
                         <div className="serviceCard mx-auto" data-aos="flip-left">
-                            <img src={meditate} alt="медитация"/>
-                            <h5 className="serviceTitle">Холотропно Дишане</h5>
-                            <p className="serviceText">
-                                Холотропното дишане e мощен метод за себеизследване и себепознание, има силен терапевтичен и изцелителен ефект посредством разтоварване и освобождаване на 
-                                натрупани енергийни блокажи, осъзнаване на важни и основни човешки ценности, както и разширяване на съзнанието, в това число представата ни за самите себе си, другите и света. 
-                                “Холотропно” буквално означава “движение към цялостност”. 
-                            </p>
+                            <i className="fas fa-lightbulb"></i>
+                            <h5 className="serviceTitle">Психологически консултации</h5>
+                            <div className="serviceText">
+                                Психологическото консултиране е подход, ориентиран към оказване на краткосорчна психологическа помощ във връзка с преодоляване на конкретна 
+                                трудност или проблем на клиента. 
+                                <p className="personalParagraph">
+                                    Обикновено в рамките на няколко сесии се постига по-голяма яснота по отношение на възможностите за справяне със ситуацията и/или проблема.
+                                </p>
+                                <Link to="/услуги"><button className="serviceCardBtn mx-auto btn">Прочетете Повече</button></Link>
+                            </div>
                         </div>
                     </div>
-                    <div className="servicesCol col-10 col-md-3 col-lg-3 mx-auto" >
+                    <div className="servicesCol col-10 col-md-4 col-lg-4 mx-auto" >
                         <div className="serviceCard mx-auto" data-aos="flip-right">
-                            <img src={lie} alt="холотропно дишане"/>
-                            <h5 className="serviceTitle">Соул Колаж</h5>
-                            <p className="serviceText">
-                                Методът Соул Колаж е уникален метод за самопознание и себеизследване, който използва творческата страна на индивида, заедно с неговата интуиция и въображение. С помощта на 
-                                създаваните карти-колажи всеки един постепенно открива различни аспекти от своята личност и обединявайки се с тях, оформя пъзела на цялостната си хармонична личност. 
-                            </p>
+                            <i className="fas fa-brain"></i>
+                            <h5 className="serviceTitle">Психотерапия</h5>
+                            <div className="serviceText">
+                                <p><span className="green">Трансперсонална</span> психотерапия</p>
+                                <p><span className="green">Когнитивно-поведенческа</span> психотерапия</p>
+                                <p><span className="green">Основана на майндфулнес</span> психотерапия</p>
+                                <p className="personalParagraph">
+                                    Терапевтичната работа изисква посвещаване на време и постоянство за трайна промяна и за сформиране на нови нагласи и модели.    
+                                </p>
+                                <p className="">За провеждането на индивидуални сесии <span className="green">на място или онлайн</span> е необходимо лично договаряне.</p>
+                            </div>
+                            <Link to="/услуги"><button className="serviceCardBtn mx-auto btn">Прочетете Повече</button></Link>
                         </div>
                     </div>
-                    <div className="servicesCol col-10 col-md-3 col-lg-3 mx-auto">
+                    <div className="servicesCol col-10 col-md-4 col-lg-4 mx-auto">
                         <div className="serviceCard mx-auto" data-aos="flip-left">
-                            <img src={draw} alt="соул колаж"/>
-                            <h5 className="serviceTitle">Медитация</h5>
-                            <p className="serviceText">
-                                Когато успеем да внесем осъзнато внимание в живота си, в това, което се проявява в настоящия момент, развиваме умението си за присъствие и приемане на настоящето и 
-                                яснотата си. Възстановяваме пълнокръвната връзка с ритъма на живота, поемаме по пътя на грижата за собственото си здраве и благополучие. Медитацията е ефективен начин за 
-                                дълбока релаксация на тялото и на ума.
-                            </p>
-                        </div>
-                    </div>
-                    <div className="servicesCol col-10 col-md-3 col-lg-3 mx-auto">
-                        <div className="serviceCard mx-auto" data-aos="flip-right">
-                            <img src={draw} alt="соул колаж"/>
-                            <h5 className="serviceTitle">Хармонично Дишане</h5>
-                            <p className="serviceText">
-                                Възможността да се учим да контролираме дишането си, като възпитаме нов модел на пълноценно, хармонично дишане, който да замени старите нефункционални навици на повърхностно и 
-                                плитко дишане, означава да можем да влияем на физическото си и психическо здраве. Така, хармонизирането на дихателните ни навици е ключов фактор за възстановяване на естествения ни баланс, 
-                                който включва тялото, енергията и ума ни.
-                            </p>
+                            <i className="fas fa-route"></i>
+                            <h5 className="serviceTitle mb-3">Личностно развитие</h5>
+                            <div className="serviceText">
+                                <p>Регулярни <span className="green">групови сесии</span> по:</p>
+                                <p className="mt-3 mb-0">Холотропно дишане</p>
+                                <p className="my-0">Соул Колаж</p>
+                                <p className="my-0">Медитация</p>
+                                <p className="mb-3">Хармонично Дишане</p>
+                                <p className="personalParagraph">За провеждането на индивидуални сесии <span className="green">на място или онлайн</span> е необходимо лично договаряне.</p>
+                                <Link to="/услуги"><button className="serviceCardBtn mx-auto btn">Прочетете Повече</button></Link>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -68,14 +68,27 @@ const ServicesWrapper = styled.div`
         background: var(--lightBlue);
         margin-top: 3rem;
         padding: 1rem;
-        box-shadow: 0px 2px 5px -2px rgba(0,0,0,0.2);
+        box-shadow: 0px 0px 10px -5px grey;
         .serviceTitle {
             color: var(--mainBlue);
             font-size: 1.5rem;
         }
         .serviceText {
-            color: black;
+            color: var(--mainDark);
+            text-align: center;
         }
+        .green {
+            font-weight: bold;
+        }
+        transition: transform 0.5s;
+        i {
+            color: var(--mainGold);
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+    .serviceCard:hover {
+        transform: scale(1.1);
     }
     .separator {
         margin-top: 2rem;
@@ -97,5 +110,17 @@ const ServicesWrapper = styled.div`
     }
     .row {
         padding: 1rem;
+    }
+    .personalParagraph {
+        margin-top: 1rem;
+    }
+    .serviceCardBtn {
+        border: solid 2px var(--mainBlue);
+        color: var(--mainBlue);
+        transition: transform 0.5s;
+        outline: none;
+    }
+    .serviceCardBtn:hover {
+        transform: scale(1.05);
     }
 `

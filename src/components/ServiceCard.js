@@ -3,41 +3,43 @@ import styled from 'styled-components'
 
 export default function ServiceCard(props) {
     return (
-        <ServiceCardWrapper img={props.img}>
-            <div className="row shadowRow" data-aos="flip-down">
+        <ServiceCardWrapper img={props.info.img}>
+            <div className="row shadowRow mx-auto" data-aos="flip-down">
                 <button className="rightArrow arrowBtn col-12" onClick={props.handleArrow}>
                     <i className="fas fa-long-arrow-alt-right"></i>
                 </button>
                 <div className="mx-auto row shadowRow">
                     <div className="row shadowRow">
-                        <div className="col-12 col-md-6 col-lg-6 serviceCol">  
-                            <div className="serviceImgContainer mx-auto"></div>
-                        </div>
-                        <div className="col-12 col-md-6 col-lg-6 serviceCol">
-                            <div className="textContainer mx-auto">
-                                <h5 className="serviceTitle">
-                                    {props.title}
-                                </h5>
-                                <div className="serviceSeparator mx-auto"/>
-                                <p className="serviceText">
-                                    {props.text}
-                                </p>
+                        <div className="row shadowRow lastRow">
+                            <div className="col-12 col-md-6 col-lg-6 serviceCol">  
+                                <div className="serviceImgContainer mx-auto"></div>
                             </div>
-                        </div>
-                        <div className="col-12">
-                            <div className="row">
-                                <div className="dots row mx-auto" onClick={props.handleDot}>
-                                    <div className={props.state === 1 ? "dot dot1 clicked" : "dot dot1"}>
-                                        <div className="innerDot innerDot1"></div>
-                                    </div>
-                                    <div className={props.state === 2 ? "dot dot2 clicked" : "dot dot2"}>
-                                        <div className="innerDot innerDot2"></div>
-                                    </div>
-                                    <div className={props.state === 3 ? "dot dot3 clicked" : "dot dot3"}>
-                                        <div className="innerDot innerDot3"></div>
-                                    </div>
-                                    <div className={props.state === 4 ? "dot dot4 clicked" : "dot dot4"}>
-                                        <div className="innerDot innerDot4"></div>
+                            <div className="col-12 col-md-6 col-lg-6 serviceCol">
+                                <div className="textContainer mx-auto">
+                                    <h5 className="serviceTitle">
+                                        {props.info.title}
+                                    </h5>
+                                    <div className="serviceSeparator mx-auto"/>
+                                    <p className="serviceText">
+                                        {props.info.text}
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="col-12">
+                                <div className="row">
+                                    <div className="dots row mx-auto" onClick={props.handleDot}>
+                                        <div className={props.state === 1 ? "dot dot1 clicked" : "dot dot1"}>
+                                            <div className="innerDot innerDot1"></div>
+                                        </div>
+                                        <div className={props.state === 2 ? "dot dot2 clicked" : "dot dot2"}>
+                                            <div className="innerDot innerDot2"></div>
+                                        </div>
+                                        <div className={props.state === 3 ? "dot dot3 clicked" : "dot dot3"}>
+                                            <div className="innerDot innerDot3"></div>
+                                        </div>
+                                        <div className={props.state === 4 ? "dot dot4 clicked" : "dot dot4"}>
+                                            <div className="innerDot innerDot4"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -122,9 +124,7 @@ const ServiceCardWrapper = styled.div`
     }
     @media (max-width: 500px) {
         .serviceImgContainer {
-            margin-top: 1rem;
-            padding: 0;
-            height: 6rem;
+            display: none;
         }
         .textContainer {
             margin-top: 0.5rem;

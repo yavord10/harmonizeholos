@@ -10,7 +10,29 @@ export default class servicesSeparator extends Component {
     constructor() {
         super();
         this.state = {
-            cardNumber: 1
+            cardNumber: 1,
+            cardInfo: [
+                {
+                    img: holoImg, 
+                    title: "Холотропно Дишане",
+                    text: "Холотропното дишане e мощен метод за себеизследване и себепознание, има силен терапевтичен и изцелителен ефект посредством разтоварване и освобождаване на натрупани енергийни блокажи, осъзнаване на важни и основни човешки ценности, както и разширяване на съзнанието, в това число представата ни за самите себе си, другите и света. “Холотропно” буквално означава “движение към цялостност”. "
+                },
+                {
+                    img: soulImg, 
+                    title: "Соул Колаж",
+                    text:"Методът Соул Колаж е уникален метод за самопознание и себеизследване, който използва творческата страна на индивида, заедно с неговата интуиция и въображение. С помощта на създаваните карти-колажи всеки един постепенно открива различни аспекти от своята личност и обединявайки се с тях, оформя пъзела на цялостната си хармонична личност."
+                },
+                {
+                    img: meditateImg, 
+                    title: "Медитация",
+                    text:'Когато успеем да внесем осъзнато внимание в живота си, в това, което се проявява в настоящия момент, развиваме умението си за присъствие и приемане на настоящето и яснотата си. Възстановяваме пълнокръвната връзка с ритъма на живота, поемаме по пътя на грижата за собственото си здраве и благополучие. Медитацията е ефективен начин за дълбока релаксация на тялото и на ума.'
+                },
+                {
+                    img: harmonImg, 
+                    title: "Хармонично Дишане",
+                    text:"Възможността да се учим да контролираме дишането си, като възпитаме нов модел на пълноценно, хармонично дишане, който да замени старите нефункционални навици на повърхностно и плитко дишане, означава да можем да влияем на физическото си и психическо здраве. Така, хармонизирането на дихателните ни навици е ключов фактор за възстановяване на естествения ни баланс, който включва тялото, енергията и ума ни."
+                }
+            ]
         }
     }
     handleDot = (e) => {
@@ -26,44 +48,47 @@ export default class servicesSeparator extends Component {
         console.log(this.state.cardNumber)
     }
     handleArrow = (e) => {
+        e.target.parentNode.id = "clicked"
         if ((e.target.className === "leftArrow arrowBtn col-12") || (e.target.className === "fas fa-long-arrow-alt-left")) {
             if (this.state.cardNumber > 1) {
-                this.setState({
+                setTimeout(() => this.setState({
                     cardNumber: this.state.cardNumber - 1
-                })
+                }), 300)
             } else {
-                this.setState({
+                setTimeout(() => this.setState({
                     cardNumber: 4
-                })
+                }), 300)
             }
         }
         if ((e.target.className === "rightArrow arrowBtn col-12") || (e.target.className === "fas fa-long-arrow-alt-right")) {
             if (this.state.cardNumber < 4) {
-                this.setState({
+                setTimeout(() => this.setState({
                     cardNumber: this.state.cardNumber + 1
-                })
+                }), 300)
             } else {
-                this.setState({
+                setTimeout(() => this.setState({
                     cardNumber: 1
-                })
+                }), 300)
             }
         }
+        e.target.parentNode.id = ""
+        e.persist()
+        setTimeout(() => {
+            e.target.parentNode.id = "clicked"
+        }, 50)
+        console.log(e.target.parentNode)
     }
     render() {
         return (
-            <ServicesTWrapper>
+            <ServicesTWrapper className="container">
                 <div className="servicesSeparator">
                     <h3 className="servicesSeparatorText mx-auto" data-aos="fade-up">Методи</h3>
                     <div className="separator mx-auto" data-aos="fade-left"></div>
                 </div>
-                {this.state.cardNumber === 1 ? <ServiceCard img={holoImg} title={"Холотропно Дишане"} handleArrow={this.handleArrow} state={this.state.cardNumber} handleDot={this.handleDot}
-                text={"Холотропното дишане e мощен метод за себеизследване и себепознание, има силен терапевтичен и изцелителен ефект посредством разтоварване и освобождаване на натрупани енергийни блокажи, осъзнаване на важни и основни човешки ценности, както и разширяване на съзнанието, в това число представата ни за самите себе си, другите и света. “Холотропно” буквално означава “движение към цялостност”. "}/> 
-                : this.state.cardNumber === 2 ? <ServiceCard img={soulImg} title={"Соул Колаж"} handleArrow={this.handleArrow} state={this.state.cardNumber} handleDot={this.handleDot}
-                text={"Методът Соул Колаж е уникален метод за самопознание и себеизследване, който използва творческата страна на индивида, заедно с неговата интуиция и въображение. С помощта на създаваните карти-колажи всеки един постепенно открива различни аспекти от своята личност и обединявайки се с тях, оформя пъзела на цялостната си хармонична личност."} />
-                : this.state.cardNumber === 3 ? <ServiceCard img={meditateImg} title={"Медитация"} handleArrow={this.handleArrow} state={this.state.cardNumber} handleDot={this.handleDot}
-                text={'Когато успеем да внесем осъзнато внимание в живота си, в това, което се проявява в настоящия момент, развиваме умението си за присъствие и приемане на настоящето и яснотата си. Възстановяваме пълнокръвната връзка с ритъма на живота, поемаме по пътя на грижата за собственото си здраве и благополучие. Медитацията е ефективен начин за дълбока релаксация на тялото и на ума.'}/> 
-                : this.state.cardNumber === 4 ? <ServiceCard img={harmonImg} title={'Хармонично Дишане'} handleArrow={this.handleArrow} state={this.state.cardNumber} handleDot={this.handleDot}
-                text={"Възможността да се учим да контролираме дишането си, като възпитаме нов модел на пълноценно, хармонично дишане, който да замени старите нефункционални навици на повърхностно и плитко дишане, означава да можем да влияем на физическото си и психическо здраве. Така, хармонизирането на дихателните ни навици е ключов фактор за възстановяване на естествения ни баланс, който включва тялото, енергията и ума ни."} />
+                {this.state.cardNumber === 1 ? <ServiceCard prev={this.state.cardInfo[3]} info={this.state.cardInfo[0]} next={this.state.cardInfo[1]} handleArrow={this.handleArrow} state={this.state.cardNumber} handleDot={this.handleDot} /> 
+                : this.state.cardNumber === 2 ? <ServiceCard prev={this.state.cardInfo[0]} info={this.state.cardInfo[1]} next={this.state.cardInfo[2]} handleArrow={this.handleArrow} state={this.state.cardNumber} handleDot={this.handleDot} />
+                : this.state.cardNumber === 3 ? <ServiceCard prev={this.state.cardInfo[1]} info={this.state.cardInfo[2]} next={this.state.cardInfo[3]} handleArrow={this.handleArrow} state={this.state.cardNumber} handleDot={this.handleDot} />
+                : this.state.cardNumber === 4 ? <ServiceCard prev={this.state.cardInfo[2]} info={this.state.cardInfo[3]} next={this.state.cardInfo[0]} handleArrow={this.handleArrow} state={this.state.cardNumber} handleDot={this.handleDot} />
                 : null }
             </ServicesTWrapper>
         )
@@ -123,5 +148,30 @@ const ServicesTWrapper = styled.div`
     .dotContainer {
         margin-bottom: -1.2rem;
         margin-top: 4rem;
+    }
+    #clicked {
+        .shadowRow {
+            .shadowRow {
+                animation: move-right 0.5s ease-in;
+            }
+        }
+    }
+    @keyframes move-right {
+        0% {
+            transform: translate(0px, 0px)
+        }
+        50% {
+            transform: translate(500px, 0px)
+        }
+        51% {
+            opacity: 0;
+        }
+        52% {
+            transform: translate(-500px, 0px)
+        }
+        100% {
+            transform: translate(0px, 0px)
+            opacity: 1;
+        }
     }
 `
