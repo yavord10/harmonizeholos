@@ -46,9 +46,8 @@ const FooterWrapper = styled.div`
         background: var(--lightBlue)
     }
     .firstCol {
-        margin-top: 1.5rem;
         img {
-            width: 8rem;
+            width: 16rem;
             height: 8rem;
         }
     }
