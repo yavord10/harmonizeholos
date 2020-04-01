@@ -6,8 +6,8 @@ export default function Personal() {
     return (
         <PersonalWrapper>
             <div className="consContainer">
-                <i className="fas fa-route"></i>
-                <h5 className="consTitle">
+                <i className="fas fa-route" data-aos="zoom-in"></i>
+                <h5 className="consTitle" data-aos="zoom-in-right">
                     Личностно развитие
                 </h5>
                 <div className="consText container">

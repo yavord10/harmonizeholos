@@ -6,8 +6,8 @@ export default function Consultation() {
     return (
         <ConsultationWrapper>
             <div className="consContainer">
-                <i className="fas fa-lightbulb"></i>
-                <h5 className="consTitle">
+                <i className="fas fa-lightbulb" data-aos="zoom-in"></i>
+                <h5 className="consTitle" data-aos="zoom-in-right">
                     Психологическо консултиране
                 </h5>
                 <div className="consText container">

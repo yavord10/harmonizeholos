@@ -2,10 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 
 export default function Therapy() {
+    window.scrollTo(0,0)
     return (
         <TherapyWrapper>
             <div className="consContainer">
-                <i className="fas fa-brain" data-aos="fade-down"></i>
+                <i className="fas fa-brain" data-aos="zoom-in"></i>
                 <h3 className="consTitle" data-aos="zoom-in-right">
                     Психотерапия
                 </h3>

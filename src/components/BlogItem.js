@@ -24,7 +24,7 @@ export default function BlogItem(props) {
             <div className="row">
                 {props.location.state.blog.title ? 
                     <React.Fragment>
-                        <div className="container col-12 col-lg-8 col-md-8 mainColumn mx-auto">
+                        <div className={relatedBlogs.length > 0 ? "container col-12 col-lg-8 col-md-8 mainColumn mx-auto" : "container col-12 col-lg-9 col-md-9 mainColumn mx-auto"}>
                             <div className="blogItemHeading">
                                 <p className="blogItemTag" data-aos="fade-right">{props.location.state.blog.field}</p>
                                 <h5 className="blogItemTitle" data-aos="zoom-in">
@@ -113,7 +113,6 @@ const BlogItemWrapper = styled.div`
         }
     }
     .relatedContentCard:hover {
-        transform: scale(1.05);
         .relatedContentTitle {
             background: var(--mainBlue);
         }
