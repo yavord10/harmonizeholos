@@ -15,25 +15,25 @@ export default function Certificates() {
             <div className="separator mx-auto" data-aos="fade-left"></div>
             <div className="row container mx-auto" data-aos="fade-right">
                 <div className="col-6 col-lg-4 col-md-4 mb-3">
-                    <img src={img1} />
+                    <img src={img1} alt="certificate"/>
                 </div>
                 <div className="col-6 col-lg-4 col-md-4 mb-3">
-                    <img src={img2} alt=""/>
+                    <img src={img2} alt="certificate"/>
                 </div>
                 <div className="col-6 col-lg-4 col-md-4 mb-3">
-                    <img src={img3} alt=""/>
+                    <img src={img3} alt="certificate"/>
                 </div>
                 <div className="col-6 col-lg-4 col-md-4 mb-3">
-                    <img src={img4} alt=""/>
+                    <img src={img4} alt="certificate"/>
                 </div>
                 <div className="col-6 col-lg-4 col-md-4 mb-3">
-                    <img src={img5} alt=""/>
+                    <img src={img5} alt="certificate"/>
                 </div>
                 <div className="col-6 col-lg-4 col-md-4 mb-3">
-                    <img src={img6} alt=""/>
+                    <img src={img6} alt="certificate"/>
                 </div> 
                 <div className="col-6 col-lg-4 col-md-4 mb-3 mx-auto">
-                    <img src={img7} alt=""/>
+                    <img src={img7} alt="certificate"/>
                 </div> 
             </div>
         </CertificatesWrapper>

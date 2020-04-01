@@ -12,7 +12,7 @@ export default function BlogItem(props) {
         for (let blog in props.location.state.blogs) {
             console.log(props.location.state.blogs[blog].field)
             console.log(props.location.state.blog.field)
-            if ((props.location.state.blog.field === props.location.state.blogs[blog].field) && (props.location.state.blog.title !== props.location.state.blogs[blog].title)) {
+            if ((props.location.state.blog.field.includes(props.location.state.blogs[blog].field)) && (props.location.state.blog.title !== props.location.state.blogs[blog].title)) {
                 relatedBlogs.push(props.location.state.blogs[blog])
             }
         }
@@ -39,7 +39,7 @@ export default function BlogItem(props) {
                         {relatedBlogs.length > 0 ? <div className="col-12 col-lg-3 col-md-4 mainColumn mx-auto sideColumn">
                             <p className="relatedHeading">Още по темата</p>
                             <div className="separator"></div>
-                            {relatedBlogs.length > 0 ? relatedBlogs.map(blog => {
+                            {relatedBlogs.length > 0 ? relatedBlogs.slice(0,8).map(blog => {
                                 return (
                                     <Link to={{
                                         pathname:`/статия/${blog.title}`,
@@ -47,7 +47,7 @@ export default function BlogItem(props) {
                                             blog: blog, 
                                             blogs: props.location.state.blogs
                                         }
-                                        }}>
+                                        }} key={relatedBlogs.indexOf(blog)}>
                                         <div className="relatedContentCard" data-aos="fade-up">
                                             <p className="relatedContentTitle">
                                                 {blog.title}
@@ -57,6 +57,7 @@ export default function BlogItem(props) {
                                     </Link>
                                 )
                             }) : null}
+                            {relatedBlogs.length > 8 ? <Link to="/блог"><button className="relatedContentButton" data-aos="fade-up">Виж повече</button></Link> : null}
                         </div> : null}
                     </React.Fragment>
                 : null}
@@ -116,6 +117,21 @@ const BlogItemWrapper = styled.div`
         .relatedContentTitle {
             background: var(--mainBlue);
         }
+    }
+    .relatedContentButton {
+        width: 100%;
+        background: none;
+        border: solid 2px var(--mainBlue);
+        color: var(--mainBlue);
+        border-radius: 3px;
+        outline: none;
+        transition: border 0.5s;
+        transition: color 0.5s;
+        padding: 0.5rem;
+    }
+    .relatedContentButton:hover {
+        border: solid 2px var(--mainDark);
+        color: var(--mainDark);
     }
     .container {
         padding: 1rem;

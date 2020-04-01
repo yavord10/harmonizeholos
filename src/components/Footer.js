@@ -9,7 +9,7 @@ export default function Footer() {
             <div className="row">
                 <div className="col">
                     <div className="firstCol">
-                        <img src={img}></img> 
+                        <img src={img} alt="logo"></img> 
                     </div>
                 </div>
                 <div className="col">
@@ -47,8 +47,9 @@ const FooterWrapper = styled.div`
     }
     .firstCol {
         img {
+            margin-top: 1.5rem;
             width: 16rem;
-            height: 8rem;
+            height: 6rem;
         }
     }
     .col {

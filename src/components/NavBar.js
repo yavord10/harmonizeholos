@@ -62,7 +62,7 @@ export default class NavBar extends Component {
                 }
             })
         }
-        if ((stateToggle === true) && (e.target.className != "nav-link dropdown-toggle")) { 
+        if ((stateToggle === true) && (e.target.className !== "nav-link dropdown-toggle")) { 
             this.setState(() => {
                 return{
                     toggle: false
@@ -92,9 +92,9 @@ export default class NavBar extends Component {
                                 </li>
                             </Link>
                             <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" onClick={() => this.toggleDropDown("Methods")}>
+                                <span className="nav-link dropdown-toggle" onClick={() => this.toggleDropDown("Methods")}>
                                     Методи
-                                </a>
+                                </span>
                                 <div className={this.state.dropdownMethods ? "dropdown-menu" : "hidden"} onClick={() => this.toggleDropDown("Methods")}>
                                     <Link to="/холотропнодишане" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Холотропно дишане</Link>
                                     <Link to="/соулколаж" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Соул Колаж</Link>
@@ -103,9 +103,9 @@ export default class NavBar extends Component {
                                 </div>
                             </li>
                             <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" onClick={() => this.toggleDropDown("Services")}>
+                                <span className="nav-link dropdown-toggle" onClick={() => this.toggleDropDown("Services")}>
                                     Услуги
-                                </a>
+                                </span>
                                 <div className={this.state.dropdownServices ? "dropdown-menu" : "hidden"} onClick={() => this.toggleDropDown("Services")}>
                                     <Link to="/услуги/консултации" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Психологическо Консултиране</Link>
                                     <Link to="/услуги/психотерапия" className="dropdown-item" onClick={() => window.scrollTo(0,0)}>Психотерапия</Link>

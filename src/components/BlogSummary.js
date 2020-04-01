@@ -3,13 +3,12 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export default function BlogSummary(props) {
-    console.log(props.blog)
     return (
         <BlogSummaryWrapper className="col-12 col-lg-4 col-md-6 col-sm-6" img={props.blog.imageUrl}>
             <Link to={{
                 pathname:`/статия/${props.blog.title}`,
                 state: {
-                    blog: props.blog, 
+                    blog: props.blog,
                     blogs: props.blogs
                 }
                 }} onClick={() => props.openBlog(props.blog)}>
