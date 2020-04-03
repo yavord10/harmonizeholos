@@ -61,7 +61,7 @@ const CertificatesWrapper = styled.div`
     img:hover{
         cursor: pointer;
         position: relative;
-        transform: scale(1.5);
+        transform: scale(1.4);
         z-index: 9999;
         box-shadow: 0px 0px 15px grey;
     }

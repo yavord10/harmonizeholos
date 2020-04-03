@@ -33,7 +33,7 @@ export default function BlogItem(props) {
                             </div>
                             <p className="blogDate"><span className="gold"><i className="far fa-clock"></i> {props.location.state.blog.date}</span></p>
                             <img src={props.location.state.blog.imageUrl} alt="" className="blogItemImg" data-aos="fade-up"/>
-                            <div className="blogItemContent" dangerouslySetInnerHTML={{__html: element.innerHtml}} data-aos="fade-right">    
+                            <div className="blogItemContent" dangerouslySetInnerHTML={{__html: element.innerHtml}}>    
                             </div>
                         </div> 
                         {relatedBlogs.length > 0 ? <div className="col-12 col-lg-3 col-md-4 mainColumn mx-auto sideColumn">
