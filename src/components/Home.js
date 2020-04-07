@@ -15,7 +15,7 @@ export default class Home extends Component {
                     <h3 className="homeTitle">Harmonize<span className="colorSpan">Holos</span></h3>
                     <p className="homeText">Или как да бъдем по-хармонични и цялостни, как да живеем по-хармонично и цялостно, как отношенията ни да бъдат по-хармонични и цялостни, 
                     как обкръжението ни да бъде по-хармонично и цялостно. Всичко започва от самите нас – осъзнаването, промяната, израстването, еволюцията!</p>
-                    <Link to="/услуги"><button className="homeButton">Регистрация</button></Link>
+                    <Link to="/резервация"><button className="homeButton">Регистрация</button></Link>
                 </div>
                 <ServicesT />
                 <Services />

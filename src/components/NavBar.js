@@ -156,6 +156,9 @@ const NavBarWrapper = styled.div`
     .coloredNav {
         background: rgba(58, 51, 71, 0.8);
     }
+    .navbtnLink {
+        outline: none;
+    }
     .topColorNav {
         background: var(--mainDark);
     }

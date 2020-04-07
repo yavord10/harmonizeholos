@@ -129,6 +129,9 @@ export default class Blog extends PureComponent {
         }
         console.log(this.state.blogArray)
     }
+    componentDidMount() {
+        window.scrollTo(0,0)
+    }
     componentWillUnmount() {
         this.database.off()
     }

@@ -12,7 +12,7 @@ export default function AboutMe() {
                     <div className="mx-auto">
                         <div className="row smallerRow">
                             <div className="col-5 mx-auto">
-                                <div className="aboutMeImg mx-auto" data-aos="flip-up"/>
+                                <div className="aboutMeImg mx-auto" data-aos="zoom-in-right"/>
                             </div>
                             <div className="col-5 mx-auto" data-aos="zoom-in-left">
                                 <h5 className="aboutMeTitle">Ели Димитрова</h5> 
