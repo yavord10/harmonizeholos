@@ -7,7 +7,7 @@ export default function Meditation() {
     return (
         <MeditationWrapper>
             <div className="meditationContainer">
-                <div className="imgContainer" data-aos="zoom-in-down">
+                <div className="imgContainer" data-aos="fade-right">
                     <h5 className="meditationTitle">Медитация</h5>
                 </div>
                 <div className="meditationText" data-aos="fade-up">

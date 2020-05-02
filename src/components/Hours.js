@@ -6,16 +6,14 @@ export default function Hours() {
     window.scrollTo(0,0)
     return (
         <HoursWrapper>
-            <h3 className="hoursTitle" data-aos="zoom-in-down">Резервация</h3>
+            <h3 className="hoursTitle" data-aos="zoom-in-down">Направете запитване</h3>
             <div className="placeDiv p-3 mt-3">
-                <h5>На място:</h5>
-                <p>Медитация, Холотропно Дишане, Соул Колаж, Хармонично Дишане, Консултации</p>
+                <p>С попълването на представената по-долу форма, може да отправите своите въпроси, да споделите своя проблем или нужда, или просто да се регистрирате, за да получавате информация за организираните от мен събития. </p>
+                <p>Ежемесечно организирам групови сесии за личностно себепознание и развитие, като използвам методите, с които работя. Ако се интересувате от конкретен метод и искате да получавате информация само и единствено за него, отбележете това в полето за “Запитване”. </p>
             </div>
-            <div className="onlineDiv p-3 my-3">
-                <h5 className="hoursOnline">Он-лайн:</h5>
-                <p>Медитация, Соул Колаж, Хармонично Дишане, Консултации</p>
+            <div className="onlineDiv p-3 mb-3">
+                <p>Възможно е и провеждането на индивидуални он-лайн консултации и терапии. В този случай може да използваме някоя от следните он-лайн платформи: <span className="dark">Google Hangouts, Zoom, Skype </span> в зависимост от вашите предпочитания.</p>
             </div>
-            <h5 className="mb-3">Направете запитване:</h5>
             <div className="formContainer container">
                 <CustomForm />
             </div>
@@ -31,8 +29,7 @@ const HoursWrapper = styled.div`
         font-size: 3rem;
         margin-bottom: 1rem;
     }
-    h5 {
-        margin-left: 1rem;
+    .dark {
         color: var(--mainDark);
     }
     .formContainer {

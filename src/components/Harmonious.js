@@ -7,7 +7,7 @@ export default function Harmonious() {
     return (
         <HarmoniousWrapper>
             <div className="HarmoniousContainer">
-                <div className="imgContainer" data-aos="zoom-in-down">
+                <div className="imgContainer" data-aos="fade-right">
                     <h5 className="HarmoniousTitle">Хармонично Дишане</h5>
                 </div>
                 <div className="HarmoniousText" data-aos="fade-up">

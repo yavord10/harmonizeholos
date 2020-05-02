@@ -37,7 +37,7 @@ export default class NavBar extends Component {
                 this.setState({
                     dropdownServices: false
                 })
-            } 
+            }
         }
     }
     handleScroll = () => {
@@ -54,6 +54,7 @@ export default class NavBar extends Component {
         }
     }
     handleClick = (e) => {
+        console.log(e.target.className)
         let stateToggle = this.state.toggle;
         if ((e.target.className === "fas fa-bars") || (e.target.className === "navbar-toggler")) {
             this.setState(() => {
@@ -70,11 +71,21 @@ export default class NavBar extends Component {
             })
         }
     }
+    closeDropDown = (e) => {
+        if (e.target.className !== "nav-link dropdown-toggle") {
+            this.setState({
+                dropdownMethods: false,
+                dropdownServices: false
+            })
+        }
+    }
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll); 
+        window.addEventListener('click', this.closeDropDown);
     }
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll);
+        window.removeEventListener('click', this.closeDropDown);
     }
     render() {
         return (

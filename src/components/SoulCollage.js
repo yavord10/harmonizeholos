@@ -7,7 +7,7 @@ export default function SoulCollage() {
     return (
         <SoulCollageWrapper>
             <div className="SoulCollageContainer">
-                <div className="imgContainer" data-aos="zoom-in-down">
+                <div className="imgContainer" data-aos="fade-right">
                     <h5 className="SoulCollageTitle">Соул Колаж</h5>
                 </div>
                 <div className="soulText mx-auto" data-aos="fade-up">

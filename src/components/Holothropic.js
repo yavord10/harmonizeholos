@@ -7,7 +7,7 @@ export default function Holothropic() {
     return (
         <HolothropicWrapper>
             <div className="HolothropicContainer">
-                    <div className="imgContainer" data-aos="zoom-in-down">
+                    <div className="imgContainer" data-aos="fade-right">
                         <h5 className="HolothropicTitle">Холотропно Дишане</h5>
                     </div>
                     <div className="holothropicText" data-aos="fade-up">
