@@ -15,7 +15,8 @@ export default function AboutMe() {
                                 <div className="aboutMeImg mx-auto" data-aos="zoom-in-right"/>
                             </div>
                             <div className="col-5 mx-auto" data-aos="zoom-in-left">
-                                <h5 className="aboutMeTitle">Ели Димитрова</h5> 
+                                <h5 className="aboutMeTitle">Ели Димитрова</h5>
+                                <p className="mb-1">Трансперсонален Психотерапевт</p> 
                                 <p className="mb-1">Психолог-консултант</p>
                                 <p className="mb-3">Фасилитатор:</p>
                                 <p className="paragraph">по <span className="blue">Холотропно дишане™</span> (2009)</p>
