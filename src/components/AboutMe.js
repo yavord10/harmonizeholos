@@ -19,8 +19,10 @@ export default function AboutMe() {
                                 <p className="mb-1">Трансперсонален Психотерапевт</p> 
                                 <p className="mb-1">Психолог-консултант</p>
                                 <p className="mb-3">Фасилитатор:</p>
-                                <p className="paragraph">по <span className="blue">Холотропно дишане™</span> (2009)</p>
-                                <p className="paragraph">по <span className="blue">СоулКолаж®</span> (2013)</p>
+                                <p className="paragraph">по <span className="blue">Холотропно дишане™</span></p>
+                                <p className="paragraph">по <span className="blue">СоулКолаж®</span></p>
+                                <p className="paragraph">по <span className="blue">Медитация</span></p>
+                                <p className="paragraph">по <span className="blue">Хармонично дишане</span></p>
                             </div>
                         </div>
                     </div>
